@@ -1,0 +1,210 @@
+.competitions {
+    background: #000000;
+    color: #717171;
+    height: auto;
+    padding: 15vh 2vw 12vh 2vw;
+    width: 92vw;
+}
+
+.competitions-title {
+    color: #ffffff;
+    font-size: 4vw;
+    font-weight: 300;
+    padding-bottom: 4vh;
+}
+
+.culti-title {
+    color: #ffffff;
+    font-size: 2vw;
+}
+
+.culti-desc {
+    font-size: 1.3vw;
+    font-weight: 300;
+    padding-bottom: 3vh;
+}
+
+.culti-desc img {
+    height: 1em;
+    vertical-align: middle;
+}
+
+.techy-title {
+    color: #ffffff;
+    font-size: 2vw;
+}
+
+.techy-desc {
+    font-size: 1.3vw;
+    font-weight: 300;
+    padding-bottom: 5vh;
+}
+
+.techy-desc img {
+    height: 1em;
+    vertical-align: middle;
+}
+
+.tab {
+    align-items: center;
+    display: flex;
+    font-size: 2vw;
+    gap: 2vh;
+}
+
+.tab div {
+    transition: color 0.2s ease-in-out;
+}
+
+.tab div:hover:not(.selected-tab) {
+    color: #b6b6b6;
+}
+
+.tab span {
+    font-size: 1.5vw;
+}
+
+.selected-tab {
+    color: #ffffff;
+}
+
+.competition-note {
+    font-size: 0.9vw;
+}
+
+.competitions-cont {
+    height: auto;
+    padding-top: 5vh;
+    width: 100%;
+}
+
+#techy-cont {
+    display: none;
+}
+
+.competition-card {
+    border-top: 0.1vh solid #676767;
+    display: flex;
+    height: auto;
+    padding: 5vh 0;
+    width: 100%;
+}
+
+
+.competition-card:nth-last-child(1) {
+    border-bottom: 0.1vh solid #676767;
+}
+
+.competition-arrow {
+    height: min-content;
+    overflow: hidden;
+    transform: rotate(-45deg);
+    transition: transform 0.2s ease;
+    width: 6%;
+}
+
+
+.competition-name {
+    color: #ffffff;
+    display: flex;
+    font-size: 2vw;
+    width: 30%;
+
+}
+
+.competition-description {
+    color: #ffffff;
+    font-size: 1.3vw;
+    font-weight: 300;
+    width: 40%;
+}
+
+#image-placeholder {
+    background-color: #ffffff;
+    display: block;
+    height: 40vh;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 10;
+}
+
+#image-placeholder img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+    .competitions {
+        padding: 15vh 5vw 6vh 5vw;
+        width: 100vw;
+    }
+
+    .competitions-title {
+        font-size: 4vh;
+        padding-bottom: 2vh;
+    }
+
+    .culti-title {
+        font-size: 4.8vw;
+        padding-bottom: 0.5vh;
+    }
+
+    .culti-desc {
+        font-size: 3.7vw;
+    }
+
+    .techy-title {
+        font-size: 4.8vw;
+        padding-bottom: 0.5vh;
+    }
+
+    .techy-desc {
+        font-size: 3.7vw;
+    }
+
+    .tab {
+        font-size: 6vw;
+        gap: 1vh;
+    }
+
+    .tab span {
+        font-size: 4.5vw;
+    }
+
+    .competitions-cont {
+        padding-top: 3vh;
+    }
+
+    .competition-card {
+        flex-direction: column;
+        gap: 0.7vh;
+        padding: 2vh 0;
+    }
+
+    .competition-name {
+        color: #ffffff;
+        display: flex;
+        font-size: 4.4vw;
+        width: 100%;
+    }
+
+    .competition-description {
+        color: #717171;
+        font-size: 3.8vw;
+        font-weight: 300;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+

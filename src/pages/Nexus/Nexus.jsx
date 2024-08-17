@@ -310,22 +310,41 @@ const Nexus = () => {
       <div className='nexus-container'>
         <h1 className='nexus-heading'>Register for<br /> Nexus</h1>
 
+        {/* <div className='nexus-progress-bar'>
+          <div className='nexus-progress-line'></div>
+          <div
+            className='nexus-progress-dot'
+            style={{ left: `${(step - 1) * 50}%` }}
+          ></div>
+          <div className='nexus-progress-step-all'>
+            {steps.map((label, index) => (
+              <div
+                key={index}
+                className={`nexus-progress-step ${index + 1 === step ? 'active' : ''}`}
+              >
+                {label}
+              </div>
+            ))}
+          </div>
+        </div> */}
+
         <div className='nexus-progress-bar'>
           <div className='nexus-progress-line'></div>
           <div
             className='nexus-progress-dot'
-            style={{ left: `${(step - 1) * 50}%` }} 
+            style={{ left: `${(step - 1)*50}%` }}
           ></div>
-          {steps.map((label, index) => (
-            <div
-              key={index}
-              className={`nexus-progress-step ${index + 1 === step ? 'active' : ''}`}
-            >
-              {label}
-            </div>
-          ))}
+          <div className='nexus-progress-step-all'>
+            {steps.map((label, index) => (
+              <div
+                key={index}
+                className={`nexus-progress-step ${index + 1 === step ? 'active' : ''}`}
+              >
+                {label}
+              </div>
+            ))}
+          </div>
         </div>
-
 
         <div className={`nexus-personal nexus-step ${step === 1 ? 'nexus-step-active' : ''}`}>
           <form className='nexus-personal-form' onSubmit={handleNext}>
@@ -396,9 +415,11 @@ const Nexus = () => {
               </select>
             </div>
             {error && <p className='error-message'>{error}</p>}
-            <button className='nexus-form-button' type='submit'>
-              Next
-            </button>
+            <div className='nexus-button-group'>
+              <button className='nexus-form-button' type='submit'>
+                Next
+              </button>
+            </div>
           </form>
         </div>
 

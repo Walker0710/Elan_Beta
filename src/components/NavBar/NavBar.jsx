@@ -61,6 +61,9 @@ function NavBar() {
             <a href='/competitions'>COMPETITIONS</a>
           </div>
           <div className='mobile-hide'>
+            <a href='/nexus'>NEXUS</a>
+          </div>
+          <div className='mobile-hide'>
             <a href='/workshops'>WORKSHOPS</a>
           </div>
           <div className='mobile-hide'>

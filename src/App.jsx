@@ -3,6 +3,7 @@ import Footer from '/src/components/Footer/Footer.jsx';
 import NavBar from '/src/components/NavBar/NavBar.jsx';
 import Accommodation from '/src/pages/Accommodation/Accommodation.jsx';
 import Competitions from '/src/pages/Competitions/Competitions.jsx';
+import Nexus from './pages/Nexus/Nexus';
 import Events from '/src/pages/Events/Events.jsx';
 import Home from '/src/pages/Home/Home.jsx';
 import SocialCause from '/src/pages/Social Cause/SocialCause.jsx';
@@ -42,6 +43,11 @@ function App() {
           <Route exact path='/competitions' element={<>
             <NavBar/>
             <Competitions/>
+            <Footer/>
+          </>}/>
+          <Route exact path='/nexus' element={<>
+            <NavBar/>
+            <Nexus/>
             <Footer/>
           </>}/>
           <Route exact path='/workshops' element={<>

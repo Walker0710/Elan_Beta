@@ -3,6 +3,8 @@ import './Nexus.css';
 import VerticalMarquee from '/src/components/VerticalMarquee/VerticalMarquee.jsx';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Nexus = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -19,19 +21,9 @@ const Nexus = () => {
   const [step, setStep] = useState(1);
   const [marksheet, setMarksheet] = useState(null);
   const [marksheetURL, setMarksheetURL] = useState('');
+  const navigate = useNavigate();
 
   const steps = ['Personal Details', 'Contact Information', 'Final Verification'];
-
-  // const handleRegister = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     // await axios.post('http://localhost:5000/user/register', { firstName, lastName, dob, grade, password, school, personalNumber, parentNumber, email});
-  //     await axios.post('http://localhost:5000/user/register', { firstName, lastName });
-  //     navigate('/');
-  //   } catch (err) {
-  //     setError('Registration failed');
-  //   }
-  // };
 
   const handleRegister = async (e) => {
     e.preventDefault();

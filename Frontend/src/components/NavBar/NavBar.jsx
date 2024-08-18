@@ -89,6 +89,9 @@ function NavBar() {
           <div className={'menu-link' + (location.pathname === '/competitions' ? ' active-menu-link' : '')}>
             <a href='/competitions'>Competitions</a>
           </div>
+          <div className={'menu-link' + (location.pathname === '/nexus' ? ' active-menu-link' : '')}>
+            <a href='/nexus'>Nexus</a>
+          </div>
           <div className={'menu-link' + (location.pathname === '/workshops' ? ' active-menu-link' : '')}>
             <a href='/workshops'>Workshops</a>
           </div>

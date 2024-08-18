@@ -18,16 +18,43 @@ const Nexus = () => {
   const [error, setError] = useState('');
   const [step, setStep] = useState(1);
   const [marksheet, setMarksheet] = useState(null);
+  const [marksheetURL, setMarksheetURL] = useState('');
 
   const steps = ['Personal Details', 'Contact Information', 'Final Verification'];
+
+  // const handleRegister = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     // await axios.post('http://localhost:5000/user/register', { firstName, lastName, dob, grade, password, school, personalNumber, parentNumber, email});
+  //     await axios.post('http://localhost:5000/user/register', { firstName, lastName });
+  //     navigate('/');
+  //   } catch (err) {
+  //     setError('Registration failed');
+  //   }
+  // };
 
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      // await axios.post('http://localhost:5000/user/register', { firstName, lastName, dob, grade, password, school, personalNumber, parentNumber, email});
-      await axios.post('http://localhost:5000/user/register', { firstName, lastName });
+      console.log('Submitting registration form:', { firstName, lastName });
+
+      const response = await axios.post('http://localhost:5000/user/register', {
+        firstName,
+        lastName,
+        // Uncomment and add other fields as needed
+        // dob,
+        // grade,
+        // password,
+        // school,
+        // personalNumber,
+        // parentNumber,
+        // email,
+      });
+
+      console.log('Registration successful:', response.data);
       navigate('/');
     } catch (err) {
+      console.error('Error during registration:', err.response ? err.response.data : err.message);
       setError('Registration failed');
     }
   };
@@ -73,9 +100,7 @@ const Nexus = () => {
       <VerticalMarquee />
 
       <div className='nexus-container'>
-        <h1 className='nexus-heading'>Register for<br /> Nexus</h1>
-
-        {/* <div className='nexus-progress-bar'>
+        <div className='nexus-progress-bar'>
           <div className='nexus-progress-line'></div>
           <div
             className='nexus-progress-dot'
@@ -91,169 +116,162 @@ const Nexus = () => {
               </div>
             ))}
           </div>
-        </div> */}
+        </div>
 
-        <div className='nexus-progress-bar'>
-          <div className='nexus-progress-line'></div>
-          <div
-            className='nexus-progress-dot'
-            style={{ left: `${(step - 1)*50}%` }}
-          ></div>
-          <div className='nexus-progress-step-all'>
-            {steps.map((label, index) => (
-              <div
-                key={index}
-                className={`nexus-progress-step ${index + 1 === step ? 'active' : ''}`}
-              >
-                {label}
-              </div>
-            ))}
+        <div className='nexus-heading-form'>
+          <div className='nexus-heading-stuff'>
+            <h1 className='nexus-heading'>Register for <br /> Nexus</h1>
+            <p className='nexus-content-link'>We are pleased to announce the launch of NEXUS, an examination for upcoming scholars, as part of IIT Hyderabad’s annual techno-cultural fest Elan & nVision. This initiative aims to provide a unique opportunity for school students to compete amongst the best, visit the campus of Indian Institute of Technology Hyderabad, and interact with IITians to seek guidance for their future endeavours.</p>
           </div>
-        </div>
 
-        <div className={`nexus-personal nexus-step ${step === 1 ? 'nexus-step-active' : ''}`}>
-          <form className='nexus-personal-form' onSubmit={handleNext}>
-            <div className='nexus-personal-input-div'>
-              <label className='nexus-personal-input-label'>First Name :</label>
-              <input
-                className='nexus-personal-input'
-                type='text'
-                value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}
-                required
-              />
+          <div className='nexus-full-form'>
+
+            <div className={`nexus-personal nexus-step ${step === 1 ? 'nexus-step-active' : ''}`}>
+              <form className='nexus-personal-form' onSubmit={handleNext}>
+                <div className='nexus-personal-input-div'>
+                  <label className='nexus-personal-input-label'>First Name :</label>
+                  <input
+                    className='nexus-personal-input'
+                    type='text'
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className='nexus-personal-input-div'>
+                  <label className='nexus-personal-input-label'>Last Name :</label>
+                  <input
+                    className='nexus-personal-input'
+                    type='text'
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className='nexus-personal-input-div'>
+                  <label className='nexus-personal-input-label'>Date Of Birth :</label>
+                  <input
+                    className='nexus-personal-input'
+                    type='date'
+                    value={dob}
+                    onChange={(e) => setDob(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className='nexus-personal-input-div'>
+                  <label className='nexus-personal-input-label'>Grade :</label>
+                  <select
+                    className='nexus-personal-input'
+                    value={grade}
+                    onChange={(e) => setGrade(e.target.value)}
+                    required
+                  >
+                    <option value='' disabled>
+                      Select Grade
+                    </option>
+                    {gradeOptions.map((gradeOption, index) => (
+                      <option key={index} value={gradeOption}>
+                        {gradeOption}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div className='nexus-personal-input-div'>
+                  <label className='nexus-personal-input-label'>School :</label>
+                  <select
+                    className='nexus-personal-input'
+                    value={school}
+                    onChange={(e) => setSchool(e.target.value)}
+                    required
+                  >
+                    <option value='' disabled>
+                      Select School
+                    </option>
+                    {schoolOptions.map((schoolOption, index) => (
+                      <option key={index} value={schoolOption}>
+                        {schoolOption}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                {error && <p className='error-message'>{error}</p>}
+                <div className='nexus-button-group'>
+                  <button className='nexus-form-button' type='submit'>
+                    Next
+                  </button>
+                </div>
+              </form>
             </div>
-            <div className='nexus-personal-input-div'>
-              <label className='nexus-personal-input-label'>Last Name :</label>
-              <input
-                className='nexus-personal-input'
-                type='text'
-                value={lastName}
-                onChange={(e) => setLastName(e.target.value)}
-                required
-              />
-            </div>
-            <div className='nexus-personal-input-div'>
-              <label className='nexus-personal-input-label'>Date Of Birth :</label>
-              <input
-                className='nexus-personal-input'
-                type='date'
-                value={dob}
-                onChange={(e) => setDob(e.target.value)}
-                required
-              />
-            </div>
-            <div className='nexus-personal-input-div'>
-              <label className='nexus-personal-input-label'>Grade :</label>
-              <select
-                className='nexus-personal-input'
-                value={grade}
-                onChange={(e) => setGrade(e.target.value)}
-                required
-              >
-                <option value='' disabled>
-                  Select Grade
-                </option>
-                {gradeOptions.map((gradeOption, index) => (
-                  <option key={index} value={gradeOption}>
-                    {gradeOption}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div className='nexus-personal-input-div'>
-              <label className='nexus-personal-input-label'>School :</label>
-              <select
-                className='nexus-personal-input'
-                value={school}
-                onChange={(e) => setSchool(e.target.value)}
-                required
-              >
-                <option value='' disabled>
-                  Select School
-                </option>
-                {schoolOptions.map((schoolOption, index) => (
-                  <option key={index} value={schoolOption}>
-                    {schoolOption}
-                  </option>
-                ))}
-              </select>
-            </div>
-            {error && <p className='error-message'>{error}</p>}
-            <div className='nexus-button-group'>
-              <button className='nexus-form-button' type='submit'>
-                Next
-              </button>
-            </div>
-          </form>
-        </div>
 
 
-        <div className={`nexus-personal nexus-step ${step === 2 ? 'nexus-step-active' : ''}`}>
-          <form className='nexus-personal-form' onSubmit={handleNext}>
-            <div className='nexus-personal-input-div'>
-              <label className='nexus-personal-input-label'>Personal Phone Number :</label>
-              <input
-                className='nexus-personal-input'
-                type='text'
-                value={personalNumber}
-                onChange={(e) => setPersonalNumber(e.target.value)}
-                required
-              />
+            <div className={`nexus-personal nexus-step ${step === 2 ? 'nexus-step-active' : ''}`}>
+              <form className='nexus-personal-form' onSubmit={handleNext}>
+                <div className='nexus-personal-input-div'>
+                  <label className='nexus-personal-input-label'>Personal Phone Number :</label>
+                  <input
+                    className='nexus-personal-input'
+                    type='text'
+                    value={personalNumber}
+                    onChange={(e) => setPersonalNumber(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className='nexus-personal-input-div'>
+                  <label className='nexus-personal-input-label'>Parents Phone Number :</label>
+                  <input
+                    className='nexus-personal-input'
+                    type='text'
+                    value={parentNumber}
+                    onChange={(e) => setParentNumber(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className='nexus-personal-input-div'>
+                  <label className='nexus-personal-input-label'>Email :</label>
+                  <input
+                    className='nexus-personal-input'
+                    type='text'
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                </div>
+                {error && <p className='error-message'>{error}</p>}
+                <div className='nexus-button-group'>
+                  <button className='nexus-form-button' type='button' onClick={handlePrevious}>
+                    Previous
+                  </button>
+                  <button className='nexus-form-button' type='submit'>
+                    Next
+                  </button>
+                </div>
+              </form>
             </div>
-            <div className='nexus-personal-input-div'>
-              <label className='nexus-personal-input-label'>Parents Phone Number :</label>
-              <input
-                className='nexus-personal-input'
-                type='text'
-                value={parentNumber}
-                onChange={(e) => setParentNumber(e.target.value)}
-                required
-              />
-            </div>
-            <div className='nexus-personal-input-div'>
-              <label className='nexus-personal-input-label'>Email :</label>
-              <input
-                className='nexus-personal-input'
-                type='text'
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
-            {error && <p className='error-message'>{error}</p>}
-            <div className='nexus-button-group'>
-              <button className='nexus-form-button' type='button' onClick={handlePrevious}>
-                Previous
-              </button>
-              <button className='nexus-form-button' type='submit'>
-                Next
-              </button>
-            </div>
-          </form>
-        </div>
 
-        <div className={`nexus-personal nexus-step ${step === 3 ? 'nexus-step-active' : ''}`}>
-          <form className='nexus-personal-form' onSubmit={handleRegister}>
-            {/* <div className='nexus-personal-input-div'>
-              <label className='nexus-personal-input-label'>Upload Marksheet :</label>
-              <input
-                className='nexus-personal-input'
-                type='file'
-                onChange={handleMarksheetUpload}
-                required
-              />
-            </div> */}
-            {error && <p className='error-message'>{error}</p>}
-            <div className='nexus-button-group'>
-              <button className='nexus-form-button' type='button' onClick={handlePrevious}>
-                Previous
-              </button>
-              <button className='nexus-form-button' type='submit'>
-                Register
-              </button>
+            <div className={`nexus-personal nexus-step ${step === 3 ? 'nexus-step-active' : ''}`}>
+              <form className='nexus-personal-form' onSubmit={handleRegister}>
+                <div className='nexus-personal-input-div'>
+                  <label className='nexus-personal-input-label'>Upload Marksheet Link :</label>
+                  <input
+                    className='nexus-personal-input'
+                    type='text'
+                    value={marksheetURL}
+                    onChange={(e) => setMarksheetURL(e.target.value)}
+                    required
+                  />
+                </div>
+                {error && <p className='error-message'>{error}</p>}
+                <div className='nexus-button-group'>
+                  <button className='nexus-form-button' type='button' onClick={handlePrevious}>
+                    Previous
+                  </button>
+                  <button className='nexus-form-button' type='submit'>
+                    Register
+                  </button>
+                </div>
+              </form>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </>

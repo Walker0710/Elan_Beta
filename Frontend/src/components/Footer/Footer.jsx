@@ -8,7 +8,7 @@ function Footer() {
         <div className='upper-footer'>
           <span className='heading'>SEND US A MAIL</span>
           <span className='mail' id='mail'>
-            <a href='mailto:elan@iith.ac.in' rel='noopener noreferrer'>ELAN@IITH.AC.IN</a>
+            <a href='mailto:elan@iith.ac.in' rel='noopener noreferrer'>elan@iith.ac.in</a>
           </span>
         </div>
         <div className='middle-footer'>

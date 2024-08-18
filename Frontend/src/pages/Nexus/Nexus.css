@@ -1,24 +1,46 @@
 .nexus-container {
     width: 100%;
-    padding-top: 750px;
-    padding-bottom: 100px;
+    padding-bottom: 90px;
+    padding-top: 240px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     color: #fff;
-    margin-bottom: 500px;
+    margin-bottom: 50px;
+}
+
+.nexus-heading-form {
+    display: flex;
+    align-items: center;
+    gap: 150px;
+    margin-right: 50px;
+    margin-top: -50px;
 }
 
 .nexus-heading {
     position: relative;
-    margin-top: -600px;
-    margin-bottom: 50px;
-    margin-right: 1300px;
-    font-size: 70px;
+    /* margin-top: -180px; */
+    margin-top: -250px;
+    margin-left: 40px;
+    font-size: 80px;
+    font-family: "enigma", serif;
+}
+
+.nexus-content-link {
+    margin-left: 45px;
+    width: 800px;
+}
+
+.nexus-full-form {
+    margin-right: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .nexus-personal-form {
+    height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,12 +58,11 @@
 }
 
 .nexus-personal-input {
-    width: 450px;
+    width: 560px;
     height: 40px;
     padding-left: 15px;
     font-size: 20px;
-    background-color: black;
-    color: #fff;
+    color: black;
     border: #fff solid 0.1px;
 }
 
@@ -73,15 +94,18 @@
 .nexus-form-button {
     padding: 10px 20px;
     width: 200px;
-    background-color: #4CAF50;
+    border: white solid 0.3px;
+    border-radius: 20px;
+    background: transparent;
     color: white;
-    border: none;
+    font-size: 16px;
     cursor: pointer;
     margin-top: 20px;
 }
 
 .nexus-form-button:hover {
-    background-color: #45a049;
+    background-color: white;
+    color: black;
 }
 
 .nexus-progress-bar {
@@ -89,7 +113,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-right: 180px;
+    margin-bottom: 40px;
     padding: 0 10px;
 }
 
@@ -109,7 +134,7 @@
     top: 50%;
     height: 16px;
     width: 16px;
-    background-color: #007bff;
+    background-color: red;
     border-radius: 50%;
     transform: translateY(-50%);
     z-index: 2;
@@ -122,18 +147,18 @@
 
 .nexus-progress-step {
     flex: 1;
-    margin-top: -70px;
+    margin-top: -80px;
     text-align: center;
     padding: 90px 145px;
     font-weight: bold;
-    color: #aaa;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
     position: relative;
     z-index: 3;
     cursor: default;
 }
 
 .nexus-progress-step.active {
-    color: #007bff;
+    color: red;
 }
-
-

@@ -120,8 +120,24 @@ const Nexus = () => {
 
         <div className='nexus-heading-form'>
           <div className='nexus-heading-stuff'>
-            <h1 className='nexus-heading'>Register for <br /> Nexus</h1>
-            <p className='nexus-content-link'>We are pleased to announce the launch of NEXUS, an examination for upcoming scholars, as part of IIT Hyderabad’s annual techno-cultural fest Elan & nVision. This initiative aims to provide a unique opportunity for school students to compete amongst the best, visit the campus of Indian Institute of Technology Hyderabad, and interact with IITians to seek guidance for their future endeavours.</p>
+            <h1 className='nexus-heading'>
+              Register for <br />
+              <span style={{ color: 'red' }}>Nexus</span>
+            </h1>
+            <p className='nexus-content-link'>We are pleased to announce the launch of NEXUS, an examination for upcoming scholars,
+              as part of IIT Hyderabad’s annual techno-cultural fest Elan & nVision. This initiative aims
+              to provide a unique opportunity for school students to compete amongst the best, visit the campus of Indian
+              Institute of Technology Hyderabad, and interact with IITians to seek guidance for their future endeavours. 
+              for more read this  &nbsp;
+              <a
+                href='https://docs.google.com/document/d/1kw2lxHn3HFV-R0BheWt5CH_qD0F4bUf9CnTGiaEPusk/edit'
+                target='_blank'
+                rel='noopener noreferrer'
+                style={{ color: 'red', textDecoration: 'underline' }}
+              >
+                doc
+              </a>.
+            </p>
           </div>
 
           <div className='nexus-full-form'>

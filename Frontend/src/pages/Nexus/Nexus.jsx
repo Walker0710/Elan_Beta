@@ -28,19 +28,18 @@ const Nexus = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      console.log('Submitting registration form:', { firstName, lastName });
+      console.log('Submitting registration form:', { firstName, lastName, dob, grade, school, personalNumber, parentNumber, email, marksheetURL });
 
       const response = await axios.post('http://localhost:5000/user/register', {
         firstName,
         lastName,
-        // Uncomment and add other fields as needed
-        // dob,
-        // grade,
-        // password,
-        // school,
-        // personalNumber,
-        // parentNumber,
-        // email,
+        dob,
+        grade,
+        school,
+        personalNumber,
+        parentNumber,
+        email,
+        marksheetURL,
       });
 
       console.log('Registration successful:', response.data);
@@ -119,8 +118,9 @@ const Nexus = () => {
             <p className='nexus-content-link'>We are pleased to announce the launch of NEXUS, an examination for upcoming scholars,
               as part of IIT Hyderabad’s annual techno-cultural fest Elan & nVision. This initiative aims
               to provide a unique opportunity for school students to compete amongst the best, visit the campus of Indian
-              Institute of Technology Hyderabad, and interact with IITians to seek guidance for their future endeavours. 
-              for more read this  &nbsp;
+              Institute of Technology Hyderabad, and interact with IITians to seek guidance for their future endeavours.
+              </p> 
+              <p className='nexus-content-link-1'>For more read this  &nbsp;
               <a
                 href='https://docs.google.com/document/d/1kw2lxHn3HFV-R0BheWt5CH_qD0F4bUf9CnTGiaEPusk/edit'
                 target='_blank'
@@ -238,7 +238,7 @@ const Nexus = () => {
                   <label className='nexus-personal-input-label'>Email :</label>
                   <input
                     className='nexus-personal-input'
-                    type='text'
+                    type='email'
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required

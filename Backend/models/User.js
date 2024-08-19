@@ -8,6 +8,34 @@ const userSchema = new mongoose.Schema({
     lastName: {
         type: String,
         required: true,
+    },
+    dob: {
+        type: Date,
+        required: true,
+    },
+    grade: {
+        type: String,
+        required: true,
+    },
+    school: {
+        type: String,
+        required: true,
+    },
+    personalNumber: {
+        type: Number,
+        required: true,
+    },
+    parentNumber: {
+        type: Number,
+        required: true,
+    },
+    email: {
+        type: String,
+        required: true,
+    },
+    marksheetURL: {
+        type: String,
+        required: true,
     }
 });
 

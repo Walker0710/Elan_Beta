@@ -19,8 +19,7 @@
 
 .nexus-heading {
     position: relative;
-    /* margin-top: -180px; */
-    margin-top: -250px;
+    margin-top: -180px;
     margin-left: 40px;
     font-size: 80px;
     font-family: "enigma", serif;
@@ -29,6 +28,13 @@
 .nexus-content-link {
     margin-left: 45px;
     width: 800px;
+}
+
+.nexus-content-link-1 {
+    margin-left: 45px;
+    width: 800px;
+    margin-top: 50px;
+    font-size: 23px;
 }
 
 .nexus-full-form {

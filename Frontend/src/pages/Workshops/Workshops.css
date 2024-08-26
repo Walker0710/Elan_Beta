@@ -17,44 +17,44 @@
 }
 
 .workshop-tiles {
-    margin-top: 10vh;
     display: flex;
-    wrap-option: wrap;
-    width: 100%;
-    height: 50vh;
     gap: 5vh;
+    height: 50vh;
+    margin-top: 10vh;
+    width: 100%;
+    wrap-option: wrap;
 }
 
 .workshop-tile {
     display: flex;
     flex-direction: column;
-    width: 25%;
     gap: 3vh;
+    width: 25%;
 }
 
 .workshop-tile-poster {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .workshop-tile-poster img {
-    width: 90%;
     border-radius: 2%;
+    width: 90%;
 }
 
 .workshop-tile-title {
-    text-align: center;
-    font-size: 1vw;
     color: #d3d3d3;
+    font-size: 1vw;
+    text-align: center;
 }
 
 .accomodation-link {
-    margin-top: 1vh;
-    color: #ffffff;
     border-bottom: white 1px solid;
-    width: fit-content;
+    color: #ffffff;
     font-size: 1.1vw;
+    margin-top: 1vh;
+    width: fit-content;
 }
 
 @media screen and (max-width: 992px) {
@@ -73,20 +73,20 @@
     }
 
     .workshop-tiles {
-        margin-top: 10vh;
         display: flex;
         flex-direction: column;
-        wrap-option: wrap;
-        width: 100%;
-        height: auto;
         gap: 10vh;
+        height: auto;
+        margin-top: 10vh;
+        width: 100%;
+        wrap-option: wrap;
     }
 
     .workshop-tile {
         display: flex;
         flex-direction: column;
-        width: 100%;
         gap: 2vh;
+        width: 100%;
     }
 
     .workshop-tile-poster img {
@@ -95,8 +95,8 @@
 
     .workshop-tile-title {
         color: #d3d3d3;
-        text-align: center;
         font-size: 5vw;
+        text-align: center;
     }
 
     .accomodation-link {

@@ -1,9 +1,9 @@
 import './Workshops.css';
 import VerticalMarquee from '/src/components/VerticalMarquee/VerticalMarquee.jsx';
-import robotics_poster from '/src/assets/workshops_posters/robotics_poster.png'
-import full_stack_poster from '/src/assets/workshops_posters/full_stack_poster.png'
-import eth_hack_poster from '/src/assets/workshops_posters/eth_hack_poster.png'
-import gen_ai_poster from '/src/assets/workshops_posters/gen_ai_poster.png'
+import robotics_poster from '/src/assets/workshops_posters/robotics_poster.png';
+import full_stack_poster from '/src/assets/workshops_posters/full_stack_poster.png';
+import eth_hack_poster from '/src/assets/workshops_posters/eth_hack_poster.png';
+import gen_ai_poster from '/src/assets/workshops_posters/gen_ai_poster.png';
 import {Link} from 'react-router-dom';
 
 

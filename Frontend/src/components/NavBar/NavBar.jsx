@@ -33,8 +33,8 @@ function NavBar() {
     window.addEventListener('scroll', something);
     return () => {
       window.removeEventListener('scroll', something);
-    }
-  })
+    };
+  });
 
   useGSAP(() => {
     if (menuOpen === true) {

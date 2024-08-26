@@ -12,6 +12,7 @@
     position: fixed;
     width: 92vw;
     z-index: 40;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .logo {

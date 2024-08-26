@@ -44,7 +44,7 @@ function Footer() {
                                                         to='https://www.instagram.com/elan_nvision.iith'>INSTAGRAM</Link>
             </div>
             <div className='social-link link-green'><Link target={'_blank'}
-                                                          to='https://x.com/elan_nvision'>TWITTER</Link></div>
+                                                          to='https://x.com/elan_nvision'>x</Link></div>
             <div className='social-link link-yellow'><Link target={'_blank'}
                                                            to='https://www.facebook.com/elannvision.iithyderabad/'>FACEBOOK</Link>
             </div>

@@ -1,73 +1,61 @@
 .nexus-container {
-    width: 100%;
-    padding-bottom: 90px;
-    padding-top: 240px;
+    color: white;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    color: #fff;
-    margin-bottom: 50px;
+    width: 100%;
+    height: auto;
+    padding: 15vh 2vh 8vh 2vh;
 }
 
 .nexus-heading-form {
     display: flex;
-    align-items: center;
-    gap: 150px;
-    margin-right: 50px;
-    margin-top: -50px;
+    flex-direction: column;
+    width: 100%;
+    gap: 6vh;
+}
+
+.nexus-heading-stuff {
+
 }
 
 .nexus-heading {
-    position: relative;
-    margin-top: -180px;
-    margin-left: 40px;
-    font-size: 80px;
-    font-family: "enigma", serif;
+    font-size: 4.5vh;
+    font-weight: 300;
+    padding-bottom: 1vh;
 }
 
-.nexus-content-link {
-    margin-left: 45px;
-    width: 800px;
+.nexus-content-para {
 }
 
 .nexus-content-link-1 {
-    margin-left: 45px;
-    width: 800px;
-    margin-top: 50px;
-    font-size: 23px;
 }
 
 .nexus-full-form {
-    margin-right: 170px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 .nexus-personal-form {
-    height: 800px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 40px;
+
 }
 
 .nexus-personal-input-div {
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
 .nexus-personal-input-label {
-    font-size: 26px;
+    font-size: 2vh;
+    color: #cfcfcf;
 }
 
 .nexus-personal-input {
-    width: 560px;
-    height: 40px;
-    padding-left: 15px;
-    font-size: 20px;
+    padding-left: 1vw;
+    font-size: 2vh;
     color: black;
     border: #fff solid 0.1px;
 }
@@ -92,15 +80,12 @@
 }
 
 .error-message {
-    color: red;
-    font-size: 0.9em;
-    margin-bottom: 10px;
 }
 
 .nexus-form-button {
     padding: 10px 20px;
     width: 200px;
-    border: white solid 0.3px;
+    border: white solid 0.7vw;
     border-radius: 20px;
     background: transparent;
     color: white;
@@ -114,57 +99,176 @@
     color: black;
 }
 
-.nexus-progress-bar {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: 180px;
-    margin-bottom: 40px;
-    padding: 0 10px;
-}
+@media screen and (min-width: 992px) {
+    .nexus-container {
+        width: 100%;
+        padding: 240px 0 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #fff;
+        margin-bottom: 50px;
+    }
 
-.nexus-progress-line {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background-color: #ddd;
-    z-index: 1;
-    transform: translateY(-50%);
-}
+    .nexus-heading-form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 5%;
+        width: 100%;
+    }
 
-.nexus-progress-dot {
-    position: absolute;
-    top: 50%;
-    height: 16px;
-    width: 16px;
-    background-color: red;
-    border-radius: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-    transition: left 0.5s ease-in-out;
-}
+    .nexus-heading {
+        position: relative;
+        margin-top: -180px;
+        margin-left: 40px;
+        font-size: 80px;
+        font-family: "enigma", serif;
+    }
 
-.nexus-progress-step-all {
-    display: flex;
-}
+    .nexus-content-para {
+        color: #d1d1d1;
+        font-size: 0.9vw;
+        margin-left: 45px;
+        width: 800px;
+    }
 
-.nexus-progress-step {
-    flex: 1;
-    margin-top: -80px;
-    text-align: center;
-    padding: 90px 145px;
-    font-weight: bold;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    position: relative;
-    z-index: 3;
-    cursor: default;
-}
+    .nexus-content-link-1 {
+        margin-left: 45px;
+        width: 800px;
+        margin-top: 50px;
+        font-size: 23px;
+    }
 
-.nexus-progress-step.active {
-    color: red;
+    .nexus-full-form {
+        margin-right: 170px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nexus-personal-form {
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .nexus-personal-input-div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nexus-personal-input-label {
+        font-size: 26px;
+    }
+
+    .nexus-personal-input {
+        width: 560px;
+        height: 40px;
+        padding-left: 15px;
+        font-size: 20px;
+        color: black;
+        border: #fff solid 0.1px;
+    }
+
+    .nexus-step {
+        display: none;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: opacity 0.3s ease, transform 0.5s ease;
+    }
+
+    .nexus-step-active {
+        display: block;
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .nexus-button-group {
+        display: flex;
+        justify-content: center;
+        gap: 160px;
+    }
+
+    .error-message {
+        color: red;
+        font-size: 0.9em;
+        margin-bottom: 10px;
+    }
+
+    .nexus-form-button {
+        padding: 10px 20px;
+        width: 200px;
+        border: white solid 0.2vw;
+        border-radius: 20px;
+        background: transparent;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    .nexus-form-button:hover {
+        background-color: white;
+        color: black;
+    }
+
+    .nexus-progress-bar {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 180px;
+        padding: 0 10px;
+    }
+
+    .nexus-progress-line {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background-color: #ddd;
+        z-index: 1;
+        transform: translateY(-50%);
+    }
+
+    .nexus-progress-dot {
+        position: absolute;
+        top: 50%;
+        height: 16px;
+        width: 16px;
+        background-color: red;
+        border-radius: 30%;
+        transform: translateY(-50%);
+        z-index: 2;
+        transition: left 0.5s ease-in-out;
+    }
+
+    .nexus-progress-step-all {
+        display: flex;
+    }
+
+    .nexus-progress-step {
+        flex: 1;
+        margin-top: -80px;
+        text-align: center;
+        padding: 90px 145px;
+        font-weight: bold;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        position: relative;
+        z-index: 3;
+        cursor: default;
+    }
+
+    .nexus-progress-step.active {
+        color: red;
+    }
 }

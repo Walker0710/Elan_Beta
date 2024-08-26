@@ -1,7 +1,7 @@
 .workshops {
     background: #000000;
     color: #717171;
-    height: 100vh;
+    height: auto;
     padding: 15vh 2vw 12vh 2vw;
     width: 92vw;
 }
@@ -14,6 +14,47 @@
 
 .workshop-description {
     font-size: 1vw;
+}
+
+.workshop-tiles {
+    margin-top: 10vh;
+    display: flex;
+    wrap-option: wrap;
+    width: 100%;
+    height: 50vh;
+    gap: 5vh;
+}
+
+.workshop-tile {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    gap: 3vh;
+}
+
+.workshop-tile-poster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.workshop-tile-poster img {
+    width: 90%;
+    border-radius: 2%;
+}
+
+.workshop-tile-title {
+    text-align: center;
+    font-size: 1vw;
+    color: #d3d3d3;
+}
+
+.accomodation-link {
+    margin-top: 1vh;
+    color: #ffffff;
+    border-bottom: white 1px solid;
+    width: fit-content;
+    font-size: 1.1vw;
 }
 
 @media screen and (max-width: 992px) {
@@ -29,6 +70,37 @@
 
     .workshop-description {
         font-size: 1.5vh;
+    }
+
+    .workshop-tiles {
+        margin-top: 10vh;
+        display: flex;
+        flex-direction: column;
+        wrap-option: wrap;
+        width: 100%;
+        height: auto;
+        gap: 10vh;
+    }
+
+    .workshop-tile {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2vh;
+    }
+
+    .workshop-tile-poster img {
+        width: 90%;
+    }
+
+    .workshop-tile-title {
+        color: #d3d3d3;
+        text-align: center;
+        font-size: 5vw;
+    }
+
+    .accomodation-link {
+        font-size: 4vw;
     }
 }
 

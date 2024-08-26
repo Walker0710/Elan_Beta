@@ -2,7 +2,7 @@ import './NavBar.css';
 import {gsap} from 'gsap';
 import {useRef, useState} from 'react';
 import {useGSAP} from '@gsap/react';
-import {useLocation} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 
 import logo from '/src/assets/logo/white_horizontal_no_bg_cropped_left.png';
 
@@ -15,6 +15,26 @@ function NavBar() {
   function toggleMenu() {
     setMenuOpen(!menuOpen);
   }
+
+  useGSAP(() => {
+    function something() {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight * 0.3;
+
+      let scrollRatio = scrollPosition / windowHeight;
+
+      scrollRatio = Math.min(Math.max(scrollRatio, 0), 1) * 0.80;
+
+      const colorChangeDiv = document.querySelector('.nav-top');
+      colorChangeDiv.style.backgroundColor = `rgba(0, 0, 0, ${scrollRatio})`;
+
+    }
+
+    window.addEventListener('scroll', something);
+    return () => {
+      window.removeEventListener('scroll', something);
+    }
+  })
 
   useGSAP(() => {
     if (menuOpen === true) {
@@ -55,16 +75,16 @@ function NavBar() {
 
         <div className='nav-links'>
           <div className='mobile-hide'>
-            <a href='/events'>EVENTS</a>
+            <Link to='/events'>EVENTS</Link>
           </div>
           <div className='mobile-hide'>
-            <a href='/competitions'>COMPETITIONS</a>
+            <Link to='/competitions'>COMPETITIONS</Link>
           </div>
           <div className='mobile-hide'>
-            <a href='/nexus'>NEXUS</a>
+            <Link to='/socialcause'>SOCIAL CAUSE</Link>
           </div>
           <div className='mobile-hide'>
-            <a href='/workshops'>WORKSHOPS</a>
+            <Link to='/workshops'>WORKSHOPS</Link>
           </div>
           <div className='mobile-hide'>
             <a href='#footer'>CONTACT US</a>
@@ -89,17 +109,17 @@ function NavBar() {
           <div className={'menu-link' + (location.pathname === '/competitions' ? ' active-menu-link' : '')}>
             <a href='/competitions'>Competitions</a>
           </div>
-          <div className={'menu-link' + (location.pathname === '/nexus' ? ' active-menu-link' : '')}>
-            <a href='/nexus'>Nexus</a>
-          </div>
           <div className={'menu-link' + (location.pathname === '/workshops' ? ' active-menu-link' : '')}>
             <a href='/workshops'>Workshops</a>
+          </div>
+          <div className={'menu-link' + (location.pathname === '/accommodation' ? ' active-menu-link' : '')}>
+            <a href='/accommodation'>Accommodation</a>
           </div>
           <div className={'menu-link' + (location.pathname === '/socialcause' ? ' active-menu-link' : '')}>
             <a href='/socialcause'>Social Cause</a>
           </div>
-          <div className={'menu-link' + (location.pathname === '/accommodation' ? ' active-menu-link' : '')}>
-            <a href='/accommodation'>Accommodation</a>
+          <div className={'menu-link' + (location.pathname === '/nexus' ? ' active-menu-link' : '')}>
+            <a href='/nexus'>Nexus</a>
           </div>
           <div className={'menu-link' + (location.pathname === '/team' ? ' active-menu-link' : '')}>
             <a href='/team'>Team</a>
@@ -113,7 +133,7 @@ function NavBar() {
             <a className='link-red' href='https://www.instagram.com/elan_nvision.iith' rel='noopener noreferrer'
                target='_blank'>Instagram</a><span className='mobile-hide'>&nbsp;/&nbsp;</span>
             <a className='link-green' href='https://x.com/elan_nvision' rel='noopener noreferrer'
-               target='_blank'>Twitter</a><span className='mobile-hide'>&nbsp;/&nbsp;</span>
+               target='_blank'>x</a><span className='mobile-hide'>&nbsp;/&nbsp;</span>
             <a className='link-yellow' href='https://www.facebook.com/elannvision.iithyderabad/'
                rel='noopener noreferrer' target='_blank'>Facebook</a><span className='mobile-hide'>&nbsp;/&nbsp;</span>
             <a className='link-orange' href='https://www.linkedin.com/company/elan-nvision-iith/'

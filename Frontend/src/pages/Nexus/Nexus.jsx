@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import './Nexus.css';
 import VerticalMarquee from '/src/components/VerticalMarquee/VerticalMarquee.jsx';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/all';
+import {gsap} from 'gsap';
+import {ScrollTrigger} from 'gsap/all';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 const Nexus = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -28,7 +28,17 @@ const Nexus = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      console.log('Submitting registration form:', { firstName, lastName, dob, grade, school, personalNumber, parentNumber, email, marksheetURL });
+      console.log('Submitting registration form:', {
+        firstName,
+        lastName,
+        dob,
+        grade,
+        school,
+        personalNumber,
+        parentNumber,
+        email,
+        marksheetURL
+      });
 
       const response = await axios.post('http://localhost:5000/user/register', {
         firstName,
@@ -39,7 +49,7 @@ const Nexus = () => {
         personalNumber,
         parentNumber,
         email,
-        marksheetURL,
+        marksheetURL
       });
 
       console.log('Registration successful:', response.data);
@@ -75,7 +85,7 @@ const Nexus = () => {
     '9th Grade',
     '10th Grade',
     '11th Grade',
-    '12th Grade',
+    '12th Grade'
   ];
 
   const schoolOptions = [
@@ -83,19 +93,19 @@ const Nexus = () => {
     'Shelbyville High',
     'Westview Middle School',
     'Riverview High School',
-    'Lakeside Elementary',
+    'Lakeside Elementary'
   ];
 
   return (
     <>
-      <VerticalMarquee />
+      <VerticalMarquee/>
 
       <div className='nexus-container'>
-        <div className='nexus-progress-bar'>
+        <div className='nexus-progress-bar mobile-hide'>
           <div className='nexus-progress-line'></div>
           <div
             className='nexus-progress-dot'
-            style={{ left: `${(step - 1) * 50}%` }}
+            style={{left: `${(step - 1) * 50}%`}}
           ></div>
           <div className='nexus-progress-step-all'>
             {steps.map((label, index) => (
@@ -112,22 +122,26 @@ const Nexus = () => {
         <div className='nexus-heading-form'>
           <div className='nexus-heading-stuff'>
             <h1 className='nexus-heading'>
-              Register for <br />
-              <span style={{ color: 'red' }}>Nexus</span>
+              Register for <br className='mobile-hide'/>
+              <span style={{color: '#ff4c4c'}}>Nexus</span>
             </h1>
-            <p className='nexus-content-link'>We are pleased to announce the launch of NEXUS, an examination for upcoming scholars,
-              as part of IIT Hyderabad’s annual techno-cultural fest Elan & nVision. This initiative aims
-              to provide a unique opportunity for school students to compete amongst the best, visit the campus of Indian
-              Institute of Technology Hyderabad, and interact with IITians to seek guidance for their future endeavours.
-              </p> 
-              <p className='nexus-content-link-1'>For more read this  &nbsp;
+            <p className='nexus-content-para'>We are pleased to announce the launch of NEXUS, an examination for
+                                              upcoming scholars,
+                                              as part of IIT Hyderabad’s annual techno-cultural fest Elan & nVision.
+                                              This initiative aims
+                                              to provide a unique opportunity for school students to compete amongst the
+                                              best, visit the campus of Indian
+                                              Institute of Technology Hyderabad, and interact with IITians to seek
+                                              guidance for their future endeavours.
+            </p>
+            <p className='nexus-content-link-1'>For more read this  &nbsp;
               <a
                 href='https://docs.google.com/document/d/1kw2lxHn3HFV-R0BheWt5CH_qD0F4bUf9CnTGiaEPusk/edit'
                 target='_blank'
                 rel='noopener noreferrer'
-                style={{ color: 'red', textDecoration: 'underline' }}
+                style={{textDecoration: 'underline'}}
               >
-                doc
+                doc&#8599;
               </a>.
             </p>
           </div>

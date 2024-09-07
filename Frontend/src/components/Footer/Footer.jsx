@@ -35,6 +35,11 @@ function Footer() {
                 <span>Head of Public Relations</span>
                 <span>+91 63040 56873</span>
               </div>
+              <div className='poc-inner'>
+                <span className='poc-name'>Anek Anjireddy</span>
+                <span>Head of Sponsorship</span>
+                <span>+91 99896 77207</span>
+              </div>
             </div>
           </div>
 

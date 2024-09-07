@@ -58,7 +58,7 @@ function Workshops() {
             </div>
             <div className='workshop-tile-title'>
               <a
-                href='https://unstop.com/p/full-stack-development-bootcamp-iit-hyderabad-1139075?lb=M5DO2NaZ&utm_medium=Share&utm_source=shortUrl'
+                href='https://unstop.com/p/full-stack-development-bootcamp-duplicate-iit-hyderabad-1139112'
                 rel='noopener noreferrer'
                 target='_blank'
                 className='underline-white'>

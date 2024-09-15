@@ -52,13 +52,14 @@ function Workshops() {
               </a>
             </div>
           </div>
+          
           <div className='workshop-tile'>
             <div className='workshop-tile-poster'>
               <img src={full_stack_poster} alt=''/>
             </div>
             <div className='workshop-tile-title'>
               <a
-                href='https://unstop.com/p/full-stack-development-bootcamp-duplicate-iit-hyderabad-1139112'
+                href='https://unstop.com/workshops-webinars/full-stack-development-bootcamp-iit-hyderabad-1139112'
                 rel='noopener noreferrer'
                 target='_blank'
                 className='underline-white'>

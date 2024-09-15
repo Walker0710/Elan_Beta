@@ -55,7 +55,7 @@ export const heads = [
   },
   {
     name: 'Yaswanth Balaji Edara',
-    position: 'Indormal & Social Cause head',
+    position: 'Informal & Social Cause head',
     image: yaswanth
   },
   {

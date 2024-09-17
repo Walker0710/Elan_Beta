@@ -2,7 +2,7 @@ import './NavBar.css';
 import {gsap} from 'gsap';
 import {useRef, useState} from 'react';
 import {useGSAP} from '@gsap/react';
-import {Link, useLocation} from 'react-router-dom';
+import {Link, useLocation, useNavigate} from 'react-router-dom';
 
 import logo from '/src/assets/logo/white_horizontal_no_bg_cropped_left.png';
 
@@ -11,9 +11,16 @@ function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const tl = gsap.timeline();
   const location = useLocation();
+  const navigate = useNavigate();
 
   function toggleMenu() {
     setMenuOpen(!menuOpen);
+  }
+
+  function onClickLink(e, link) {
+    e.preventDefault();
+    setMenuOpen(false);
+    navigate(link);
   }
 
   useGSAP(() => {
@@ -101,28 +108,28 @@ function NavBar() {
         </div>
         <div className='menu'>
           <div className={'menu-link' + (location.pathname === '/' ? ' active-menu-link' : '')}>
-            <a href='/'>Home</a>
+            <a href='/' onClick={(e) => onClickLink(e, '/')}>Home</a>
           </div>
           <div className={'menu-link' + (location.pathname === '/events' ? ' active-menu-link' : '')}>
-            <a href='/events'>Events</a>
+            <a href='/events' onClick={(e) => onClickLink(e, '/events')}>Events</a>
           </div>
           <div className={'menu-link' + (location.pathname === '/competitions' ? ' active-menu-link' : '')}>
-            <a href='/competitions'>Competitions</a>
+            <a href='/competitions' onClick={(e) => onClickLink(e, '/competitions')}>Competitions</a>
           </div>
           <div className={'menu-link' + (location.pathname === '/workshops' ? ' active-menu-link' : '')}>
-            <a href='/workshops'>Workshops</a>
+            <a href='/workshops' onClick={(e) => onClickLink(e, '/workshops')}>Workshops</a>
           </div>
           <div className={'menu-link' + (location.pathname === '/accommodation' ? ' active-menu-link' : '')}>
-            <a href='/accommodation'>Accommodation</a>
+            <a href='/accommodation' onClick={(e) => onClickLink(e, '/accommodation')}>Accommodation</a>
           </div>
           <div className={'menu-link' + (location.pathname === '/socialcause' ? ' active-menu-link' : '')}>
-            <a href='/socialcause'>Social Cause</a>
+            <a href='/socialcause' onClick={(e) => onClickLink(e, '/socialcause')}>Social Cause</a>
           </div>
           <div className={'menu-link' + (location.pathname === '/nexus' ? ' active-menu-link' : '')}>
-            <a href='/nexus'>Nexus</a>
+            <a href='/nexus' onClick={(e) => onClickLink(e, '/nexus')}>Nexus</a>
           </div>
           <div className={'menu-link' + (location.pathname === '/team' ? ' active-menu-link' : '')}>
-            <a href='/team'>Team</a>
+            <a href='/team' onClick={(e) => onClickLink(e, '/team')}>Team</a>
           </div>
         </div>
         <div className='social-links'>

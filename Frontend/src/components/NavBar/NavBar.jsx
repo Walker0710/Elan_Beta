@@ -23,6 +23,21 @@ function NavBar() {
     navigate(link);
   }
 
+  function handleSection(e, path) {
+    e.preventDefault();
+    if (path && path.includes("#")) {
+      setTimeout(() => {
+        const id = path.replace("#", "")
+        const el = window.document.getElementById(id)
+        const r = el.getBoundingClientRect()
+        window.top.scroll({
+          top: scrollY + r.top,
+          behavior: "smooth",
+        })
+      }, 100)
+    }
+  }
+
   useGSAP(() => {
     function something() {
       const scrollPosition = window.scrollY;
@@ -94,9 +109,9 @@ function NavBar() {
             <Link to='/workshops'>WORKSHOPS</Link>
           </div>
           <div className='mobile-hide'>
-            <a href='#footer'>CONTACT US</a>
+            <a href='#footer' onClick={(e) => handleSection(e, '#footer')}>CONTACT US</a>
           </div>
-          <div className='menu-open' onClick={toggleMenu}>
+          <div className='menu-open'>
             MENU
           </div>
         </div>

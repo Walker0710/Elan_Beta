@@ -111,7 +111,7 @@ function NavBar() {
           <div className='mobile-hide'>
             <a href='#footer' onClick={(e) => handleSection(e, '#footer')}>CONTACT US</a>
           </div>
-          <div className='menu-open'>
+          <div className='menu-open' onClick={toggleMenu}>
             MENU
           </div>
         </div>

@@ -11,7 +11,7 @@ import Team from '/src/pages/Team/Team.jsx';
 import Workshops from '/src/pages/Workshops/Workshops.jsx';
 import {ReactLenis, useLenis} from 'lenis/react';
 import {useEffect} from 'react';
-import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import {HashRouter, Route, Routes} from 'react-router-dom';
 import './App.css';
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
 
   return (
     <ReactLenis root>
-      <BrowserRouter>
+      <HashRouter>
         <CustomCursor/>
         <Routes>
           <Route exact path='/' element={<>
@@ -71,7 +71,7 @@ function App() {
             <Footer/>
           </>}/>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </ReactLenis>
   );
 }

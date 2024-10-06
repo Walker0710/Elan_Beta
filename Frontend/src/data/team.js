@@ -277,6 +277,7 @@ import shreevel from '/src/assets/team_images/Shreevel K J_creatives_coordinator
 import anjali from '/src/assets/team_images/Anjali Uikey_Creatives_coordinator.jpg';
 import parvathy from '/src/assets/team_images/Parvathy Sujith_Creatives_Coordinator.jpg';
 import vikas from '/src/assets/team_images/Vikas Addakula_Creatives_Coordinator.jpg';
+import pranav from '/src/assets/team_images/Pranav_Creatives_Coordinator.png'
 
 export const creatives_team = [
   {
@@ -298,6 +299,10 @@ export const creatives_team = [
   {
     name: 'Vika Addakula',
     image: vikas
+  },
+  {
+    name: 'Pranav',
+    image: pranav
   }
 ];
 

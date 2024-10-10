@@ -247,6 +247,7 @@ export const security_team = [
 import aashna from '/src/assets/team_images/Aashna_Informals_coordinator.jpg';
 import vakarthik from '/src/assets/team_images/Yakkala Amarnath Karthik_infor,mals_coordinator.jpg';
 import dhruvgoyal from '/src/assets/team_images/Dhruv Goyal_informals_coordinator.jpg';
+import goutham from '/src/assets/team_images/Goutham_Informals_Coordinator.jpg';
 
 export const informals_team = [
   {
@@ -260,6 +261,10 @@ export const informals_team = [
   {
     name: 'Dhruv Goyal',
     image: dhruvgoyal
+  },
+  {
+    name: 'Kamale Goutham',
+    image: goutham
   }
 ];
 
@@ -501,4 +506,15 @@ export const transport_team = [
     image: preetham
   }
 ];
+
+import hamal from '/src/assets/team_images/Hamal_Logistics_Coordinator.png'
+
+export const logistics_team = [
+  {
+    name: 'Hamal Daniel',
+    image: hamal
+  },
+]
+
+
 

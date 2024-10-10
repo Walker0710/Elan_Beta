@@ -21,7 +21,8 @@ import {
   sponsorship_team,
   techy_team, transport_team,
   web_team,
-  workshop_team
+  workshop_team,
+  logistics_team
 } from '/src/data/team.js';
 
 
@@ -359,6 +360,22 @@ function Team() {
             <div className='team-coord-cont'>
               {
                 transport_team.map((person, index) => (
+                  <div className='person-card' key={index}>
+                    <div className='person-card-img'>
+                      <img src={person.image} alt=''/>
+                    </div>
+                    <div className='person-card-name'>{person.name}</div>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+
+          <div className='team-inner'>
+            <div className='team-title'>Logistics</div>
+            <div className='team-coord-cont'>
+              {
+                logistics_team.map((person, index) => (
                   <div className='person-card' key={index}>
                     <div className='person-card-img'>
                       <img src={person.image} alt=''/>

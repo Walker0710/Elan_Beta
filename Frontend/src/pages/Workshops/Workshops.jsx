@@ -1,9 +1,7 @@
 import './Workshops.css';
 import VerticalMarquee from '/src/components/VerticalMarquee/VerticalMarquee.jsx';
-import robotics_poster from '/src/assets/workshops_posters/robotics_poster.png';
-import full_stack_poster from '/src/assets/workshops_posters/full_stack_poster.png';
-import eth_hack_poster from '/src/assets/workshops_posters/eth_hack_poster.png';
-import gen_ai_poster from '/src/assets/workshops_posters/gen_ai_poster.png';
+import eth_hack_poster from '/src/assets/workshops_posters/eth_hack_poster.jpeg';
+import aiml_poster from '/src/assets/workshops_posters/aiml_poster.jpeg';
 import {Link} from 'react-router-dom';
 
 
@@ -38,42 +36,14 @@ function Workshops() {
         </div>
 
         <div className='workshop-tiles'>
-          <div className='workshop-tile'>
-            <div className='workshop-tile-poster'>
-              <img src={robotics_poster} alt=''/>
-            </div>
-            <div className='workshop-tile-title'>
-              <a
-                href='https://unstop.com/p/robotics-technical-workshop-elan-ivision-2025-iit-hyderabad-1139085'
-                rel='noopener noreferrer'
-                target='_blank'
-                className='underline-white'>
-                Register for workshop&#8599;
-              </a>
-            </div>
-          </div>
-          
-          <div className='workshop-tile'>
-            <div className='workshop-tile-poster'>
-              <img src={full_stack_poster} alt=''/>
-            </div>
-            <div className='workshop-tile-title'>
-              <a
-                href='https://unstop.com/workshops-webinars/full-stack-development-bootcamp-iit-hyderabad-1139112'
-                rel='noopener noreferrer'
-                target='_blank'
-                className='underline-white'>
-                Register for workshop&#8599;
-              </a>
-            </div>
-          </div>
+
           <div className='workshop-tile'>
             <div className='workshop-tile-poster'>
               <img src={eth_hack_poster} alt=''/>
             </div>
             <div className='workshop-tile-title'>
               <a
-                href='https://unstop.com/p/ethical-hacking-technical-workshop-elan-ivision-2025-iit-hyderabad-1139214'
+                href='https://unstop.com/workshops-webinars/ethical-hacking-technical-workshop-elan-ivision-2025-iit-hyderabad-1174657?lb=58he6PlW'
                 rel='noopener noreferrer'
                 target='_blank'
                 className='underline-white'>
@@ -81,13 +51,14 @@ function Workshops() {
               </a>
             </div>
           </div>
+
           <div className='workshop-tile'>
             <div className='workshop-tile-poster'>
-              <img src={gen_ai_poster} alt=''/>
+              <img src={aiml_poster} alt=''/>
             </div>
             <div className='workshop-tile-title'>
               <a
-                href='https://unstop.com/p/generative-ai-and-chatgpt-workshop-iit-hyderabad-1139108'
+                href='https://unstop.com/workshops-webinars/ai-ml-workshop-mastering-the-future-of-technology-iit-hyderabad-1174416'
                 rel='noopener noreferrer'
                 target='_blank'
                 className='underline-white'>
@@ -95,8 +66,8 @@ function Workshops() {
               </a>
             </div>
           </div>
-        </div>
 
+        </div>
 
       </div>
     </>

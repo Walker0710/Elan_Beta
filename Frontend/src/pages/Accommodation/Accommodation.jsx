@@ -1,10 +1,14 @@
 import './Accommodation.css';
 import VerticalMarquee from '/src/components/VerticalMarquee/VerticalMarquee.jsx';
 import {faqs} from '/src/data/faqs.js';
+import {Helmet} from 'react-helmet';
 
 function Accommodation() {
   return (
     <>
+      <Helmet>
+        <title>Elan&nVision | Accomodation</title>
+      </Helmet>
       <VerticalMarquee/>
       <div className='accommodation'>
         <div className='accommodation-title'>Accommodation</div>

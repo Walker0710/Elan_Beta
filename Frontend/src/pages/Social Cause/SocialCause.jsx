@@ -1,10 +1,14 @@
 import './SocialCause.css';
 import VerticalMarquee from '/src/components/VerticalMarquee/VerticalMarquee.jsx';
 import SocialCauseImage from '/src/assets/social-cause-image.jpg';
+import {Helmet} from 'react-helmet';
 
 function SocialCause() {
   return (
     <>
+      <Helmet>
+        <title>Elan&nVision | Social Cause</title>
+      </Helmet>
       <VerticalMarquee/>
       <div className='social-cause'>
         <div className='social-cause-title'>Social Cause</div>

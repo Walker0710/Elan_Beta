@@ -24,11 +24,15 @@ import {
   workshop_team,
   logistics_team
 } from '/src/data/team.js';
+import {Helmet} from 'react-helmet';
 
 
 function Team() {
   return (
     <>
+      <Helmet>
+        <title>Elan&nVision | Team</title>
+      </Helmet>
       <VerticalMarquee/>
       <div className='team'>
         <div className='team-page-title'>Our team</div>

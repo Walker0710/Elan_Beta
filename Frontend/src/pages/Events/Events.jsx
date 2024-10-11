@@ -12,6 +12,7 @@ import workshop3 from '/src/assets/events_images/workshop3.jpg';
 import infi1 from '/src/assets/events_images/infi1.jpg';
 import infi2 from '/src/assets/events_images/infi2.jpg';
 import infi3 from '/src/assets/events_images/infi3.jpg';
+import {Helmet} from 'react-helmet';
 
 function Events() {
   const [eventNo, setEventNo] = useState(0);
@@ -73,6 +74,9 @@ function Events() {
 
   return (
     <>
+      <Helmet>
+        <title>Elan&nVision | Events</title>
+      </Helmet>
       <VerticalMarquee/>
 
       <div className='control desktop-hide'>

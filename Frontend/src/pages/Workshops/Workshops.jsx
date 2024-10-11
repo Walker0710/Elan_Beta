@@ -3,11 +3,15 @@ import VerticalMarquee from '/src/components/VerticalMarquee/VerticalMarquee.jsx
 import eth_hack_poster from '/src/assets/workshops_posters/eth_hack_poster.jpeg';
 import aiml_poster from '/src/assets/workshops_posters/aiml_poster.jpeg';
 import {Link} from 'react-router-dom';
+import {Helmet} from 'react-helmet';
 
 
 function Workshops() {
   return (
     <>
+      <Helmet>
+        <title>Elan&nVision | Workshops</title>
+      </Helmet>
       <VerticalMarquee/>
       <div className='workshops'>
         <div className='workshop-title'>Workshops</div>

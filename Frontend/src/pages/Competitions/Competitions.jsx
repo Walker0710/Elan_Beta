@@ -10,6 +10,7 @@ import culti3 from '/src/assets/comp_desc_imgs/culti3.jpg';
 import tech1 from '/src/assets/comp_desc_imgs/tech1.jpg';
 import tech2 from '/src/assets/comp_desc_imgs/tech2.jpg';
 import tech3 from '/src/assets/comp_desc_imgs/tech3.jpg';
+import {Helmet} from 'react-helmet';
 
 
 function Competitions() {
@@ -69,6 +70,9 @@ function Competitions() {
 
   return (
     <>
+      <Helmet>
+        <title>Elan&nVision | Competitions</title>
+      </Helmet>
       <VerticalMarquee/>
       <div className='competitions'>
         <div className='competitions-title'>Competitions</div>

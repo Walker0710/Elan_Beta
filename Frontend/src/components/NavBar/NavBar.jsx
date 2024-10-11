@@ -140,9 +140,6 @@ function NavBar() {
           <div className={'menu-link' + (location.pathname === '/socialcause' ? ' active-menu-link' : '')}>
             <a href='/socialcause' onClick={(e) => onClickLink(e, '/socialcause')}>Social Cause</a>
           </div>
-          <div className={'menu-link' + (location.pathname === '/nexus' ? ' active-menu-link' : '')}>
-            <a href='/nexus' onClick={(e) => onClickLink(e, '/nexus')}>Nexus</a>
-          </div>
           <div className={'menu-link' + (location.pathname === '/team' ? ' active-menu-link' : '')}>
             <a href='/team' onClick={(e) => onClickLink(e, '/team')}>Team</a>
           </div>

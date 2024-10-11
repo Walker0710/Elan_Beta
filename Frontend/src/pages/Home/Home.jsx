@@ -32,6 +32,7 @@ import Safexpress from '/src/assets/sponsors_images/Safexpress.png'
 import Stockedge from '/src/assets/sponsors_images/Stockedge.png'
 import Tinder from '/src/assets/sponsors_images/Tinder.png'
 import Uniball from '/src/assets/sponsors_images/Uniball.png'
+import {Helmet} from 'react-helmet';
 
 function Home() {
   gsap.registerPlugin(ScrollTrigger);
@@ -135,11 +136,16 @@ function Home() {
 
   return (
     <>
+      <Helmet>
+        <title>Elan&nVision | Home</title>
+      </Helmet>
+
+
       <VerticalMarquee/>
       <div className='home-bg'></div>
       <div className='container' ref={containerRef}>
 
-        <a href='/workshops' className='mobile-hide' onMouseLeave={onMouseLeave} onMouseMove={onMouseEnter} onClick={(e) => handleWorkshop(e, '/workshops')} >
+        <Link to='/workshops' className='mobile-hide' onMouseLeave={onMouseLeave} onMouseMove={onMouseEnter} onClick={(e) => handleWorkshop(e, '/workshops')} >
           <div className='hero'>
             <div className='hero-text'>
               <span ref={elanRef} className='elan-text'>Elan &<br/></span>
@@ -150,7 +156,7 @@ function Home() {
               <div>IIT HYDERABAD</div>
             </div>
           </div>
-        </a>
+        </Link>
 
         <div className='hero desktop-hide'>
           <div className='hero-text'>

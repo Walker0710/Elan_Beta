@@ -1,0 +1,69 @@
+.nexus1-container{
+    background: #000000;
+    color: #717171;
+    height: auto;
+    padding: 15vh 2vw 12vh 2vw;
+    width: 92vw;
+}
+.nexus1-title{
+    color: #ffffff;
+    font-size: 3vw;
+    font-weight: 300;
+    padding-bottom: 4vh;
+    text-align: center;
+}
+.events-container {
+    background-color: #000000;
+    border-bottom: rgba(255, 255, 255, 0.45) 0.1vh solid;
+    display: grid;
+    gap: 1.5vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 60vw;
+    padding: 0 0 6vw 0;
+    position: relative;
+    width: 88vw;
+}
+.event1{
+  background:url("https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80") center;
+  background-size: cover;
+  border-radius: 1.5vw;
+  
+}
+.event2{
+  background:url("https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80") no-repeat center;
+  background-size: cover;
+  border-radius: 1.5vw;
+}
+.event3{
+  background:url("https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?cs=srgb&dl=pexels-souvenirpixels-417074.jpg&fm=jpg") no-repeat center;
+  background-size: cover;
+  border-radius: 1.5vw;
+}
+.event4{
+  background:url("https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?cs=srgb&dl=pexels-souvenirpixels-417074.jpg&fm=jpg") no-repeat center;
+  background-size: cover;
+  border-radius: 1.5vw;
+}
+.event{
+  position:relative;
+  overflow: hidden;
+}
+.gallery-container{
+  width:80%;
+}
+.gallery1{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(4,1fr);
+  height:120vw;
+  width: 90vw;
+  gap: 1.5vw;  
+  margin-bottom: 5vh;
+  overflow: hidden;
+}
+.image{
+  width:100%;
+  height:100%;
+}
+

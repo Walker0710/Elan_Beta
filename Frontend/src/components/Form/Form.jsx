@@ -14,10 +14,6 @@ function Form(props) {
         <input type="tel" id="teamLeadNumber" name="teamLeadNumber" required/>
         <br/><br/>
 
-        <label htmlFor="phoneNumber">Additional Phone Number:</label>
-        <input type="tel" id="phoneNumber" name="phoneNumber"/>
-        <br/><br/>
-
         <label htmlFor="participantEmail1">Participant Email 1:</label>
         <input type="email" id="participantEmail1" name="participantEmail1" required/>
         <br/><br/>

@@ -7,13 +7,16 @@
 
 .nexus-title {
     color: #ffffff;
-    font-size: 4vw;
+    margin-top: 7vh;
+    font-size: 20vw;
     font-weight: 300;
+    font-family: "GALSB", system-ui;
 }
 
 .nexus-description {
+    width: 70%;
     color: #a1a1a1;
-    font-size: 1.2vw;
+    font-size: 1vw;
 }
 
 .nexus-reg-link {

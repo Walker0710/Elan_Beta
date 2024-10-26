@@ -15,6 +15,8 @@ import {useEffect} from 'react';
 import {HashRouter, BrowserRouter, Route, Routes} from 'react-router-dom';
 import './App.css';
 
+import Form from '/src/components/Form/Form.jsx';
+
 function App() {
   const lenis = useLenis(({scroll}) => {
   });
@@ -76,6 +78,14 @@ function App() {
             <Team/>
             <Footer/>
           </>}/>
+
+          <Route exact path='/nexus-registration' element={<>
+            <NavBar/>
+            <Form/>
+            <Footer/>
+          </>}/>
+
+
         </Routes>
       </BrowserRouter>
     </ReactLenis>

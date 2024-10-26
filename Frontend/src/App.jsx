@@ -48,12 +48,12 @@ function App() {
             <Competitions/>
             <Footer/>
           </>}/>
-          <Route exact path='/nexus' element={<>
+          {/* <Route exact path='/nexus' element={<>
             <NavBar/>
             <Nexus/>
             <Footer/>
-          </>}/>
-          <Route exact path='/nexus1' element={<>
+          </>}/> */}
+          <Route exact path='/nexus' element={<>
             <NavBar/>
             <Nexus1/>
             <Footer/>
@@ -80,9 +80,9 @@ function App() {
           </>}/>
 
           <Route exact path='/nexus-registration' element={<>
-            <NavBar/>
+            {/* <NavBar/> */}
             <Form/>
-            <Footer/>
+            {/* <Footer/> */}
           </>}/>
 
 

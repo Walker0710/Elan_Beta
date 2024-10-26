@@ -1,61 +1,362 @@
-import './Nexus1.css'
+import './Nexus1.css';
 import VerticalMarquee from '/src/components/VerticalMarquee/VerticalMarquee.jsx';
-import {gsap} from 'gsap';
-import {useGSAP} from '@gsap/react';
-import {useEffect, useRef, useState} from 'react';
 import {Helmet} from 'react-helmet';
-import img1 from '/src/assets/nexus_gallery/img1.jpeg'
-import img2 from '/src/assets/nexus_gallery/img2.jpeg'
-import img3 from '/src/assets/nexus_gallery/img3.jpeg'
-import img4 from '/src/assets/nexus_gallery/img4.jpeg'
-import img5 from '/src/assets/nexus_gallery/img5.jpg'
-import img11 from '/src/assets/nexus_gallery/img11.jpeg'
-import img12 from '/src/assets/nexus_gallery/img12.jpeg'
-import img8 from '/src/assets/nexus_gallery/img8.jpeg'
-import img9 from '/src/assets/nexus_gallery/img9.jpeg'
-import img10 from '/src/assets/nexus_gallery/img10.jpeg'
-import img13 from '/src/assets/nexus_gallery/img13.jpg'
-import img14 from '/src/assets/nexus_gallery/img14.jpg'
-import img15 from '/src/assets/nexus_gallery/img15.jpg'
-import img16 from '/src/assets/nexus_gallery/img16.jpg'
 
-function Nexus1(){
-    return(
-       <>
-         <Helmet>
-            <title>ELan&nVision | Nexus </title>
-         </Helmet>
-         <VerticalMarquee/>
-         <div className='nexus1-container'>
-            <div className='nexus1-title'>Nexus Events</div>
-            <div className='events-container'>
-                <div className='event event1'></div>
-                <div className='event event2'></div>
-                <div className='event event3'></div>
-                <div className='event event4'></div>
-            </div>
-            <div className='gallery-container'>
-              <div className='gallery1-title'>Gallery</div>
-              <div className='gallery1'>
-                <div className='gitem g1'><img src={img1} className='image'/></div>
-                <div className='gitem g2'><img src={img2} className='image'/></div>
-                <div className='gitem g3'><img src={img3} className='image'/></div>
-                <div className='gitem g4'><img src={img4} className='image'/></div>
-                <div className='gitem g5'><img src={img5} className='image'/></div>
-                <div className='gitem g8'><img src={img8} className='image'/></div>
-                <div className='gitem g9'><img src={img9} className='image'/></div>
-                <div className='gitem g10'><img src={img10} className='image'/></div>
-                <div className='gitem g11'><img src={img11} className='image'/></div>
-                <div className='gitem g12'><img src={img12} className='image'/></div>
-                <div className='gitem g13'><img src={img13} className='image'/></div>
-                <div className='gitem g14'><img src={img14} className='image'/></div>
-                <div className='gitem g15'><img src={img15} className='image'/></div>
-                <div className='gitem g16'><img src={img16} className='image'/></div>
+function Nexus1() {
+  return (
+    <>
+      <Helmet>
+        <title>ELan&nVision | Nexus </title>
+      </Helmet>
+      <VerticalMarquee/>
+      <div className='nexus-cont'>
+
+        <div className='nexus-title'>Nexus</div>
+
+        <div className='nexus-description'>Nexus description...
+
+
+        </div>
+        <div className='nexus-reg-link'>
+          <a
+            href=''
+            rel='noopener noreferrer'
+            target='_blank'
+            className='underline-white'>
+            Register Now&#8599;
+          </a>
+
+        </div>
+
+        <div className='event-cont'>
+          <div className='event-day-date'>Monday, November 4th</div>
+          <div className='event-day'>
+
+            <div className='event-post'>
+              <div className='event-name'>Family Feud</div>
+              <div className='event-time'>XXXXXX XX, XXXXX</div>
+              <div className='event-venue'>Venue</div>
+              <div className='event-desc'>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum
               </div>
             </div>
-         </div>
-         
-       </>
-    );
+            <div className='event-post'>
+              <div className='event-name'>Balloon Stomp</div>
+              <div className='event-time'>XXXXXX XX, XXXXX</div>
+              <div className='event-venue'>Venue</div>
+              <div className='event-desc'>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum
+              </div>
+            </div>
+          </div>
+
+
+          <div className='event-day-date'>Tuesday, November 5th</div>
+          <div className='event-day'>
+            <div className='event-post'>
+              <div className='event-name'>Superhero Auction</div>
+              <div className='event-time'>XXXXXX XX, XXXXX</div>
+              <div className='event-venue'>Venue</div>
+              <div className='event-desc'>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum
+              </div>
+            </div>
+            <div className='event-post'>
+              <div className='event-name'>Sports Rush</div>
+              <div className='event-time'>XXXXXX XX, XXXXX</div>
+              <div className='event-venue'>Venue</div>
+              <div className='event-desc'>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum
+              </div>
+            </div>
+          </div>
+
+          <div className='event-day-date'>Wednesday, November 6th</div>
+          <div className='event-day'>
+            <div className='event-post'>
+              <div className='event-name'>Black Jack</div>
+              <div className='event-time'>XXXXXX XX, XXXXX</div>
+              <div className='event-venue'>Venue</div>
+              <div className='event-desc'>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum
+              </div>
+            </div>
+            <div className='event-post'>
+              <div className='event-name'>Bay Blade Showdown</div>
+              <div className='event-time'>XXXXXX XX, XXXXX</div>
+              <div className='event-venue'>Venue</div>
+              <div className='event-desc'>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum
+              </div>
+            </div>
+            <div className='event-post'>
+              <div className='event-name'>Tug of War</div>
+              <div className='event-time'>XXXXXX XX, XXXXX</div>
+              <div className='event-venue'>Venue</div>
+              <div className='event-desc'>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum
+              </div>
+            </div>
+            <div className='event-post'>
+              <div className='event-name'>Wikithon</div>
+              <div className='event-time'>XXXXXX XX, XXXXX</div>
+              <div className='event-venue'>Venue</div>
+              <div className='event-desc'>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum
+              </div>
+            </div>
+            <div className='event-post'>
+              <div className='event-name'>Magic Tiles 3</div>
+              <div className='event-time'>XXXXXX XX, XXXXX</div>
+              <div className='event-venue'>Venue</div>
+              <div className='event-desc'>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum
+              </div>
+            </div>
+            <div className='event-post'>
+              <div className='event-name'>Split or Steal</div>
+              <div className='event-time'>XXXXXX XX, XXXXX</div>
+              <div className='event-venue'>Venue</div>
+              <div className='event-desc'>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum
+              </div>
+            </div>
+            <div className='event-post'>
+              <div className='event-name'>Limbo</div>
+              <div className='event-time'>XXXXXX XX, XXXXX</div>
+              <div className='event-venue'>Venue</div>
+              <div className='event-desc'>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum
+              </div>
+            </div>
+            <div className='event-post'>
+              <div className='event-name'>Make Them Laugh</div>
+              <div className='event-time'>XXXXXX XX, XXXXX</div>
+              <div className='event-venue'>Venue</div>
+              <div className='event-desc'>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum
+              </div>
+            </div>
+            <div className='event-post'>
+              <div className='event-name'>Dog and Bone 3v3</div>
+              <div className='event-time'>XXXXXX XX, XXXXX</div>
+              <div className='event-venue'>Venue</div>
+              <div className='event-desc'>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum
+              </div>
+            </div>
+            <div className='event-post'>
+              <div className='event-name'>Guess the Song</div>
+              <div className='event-time'>XXXXXX XX, XXXXX</div>
+              <div className='event-venue'>Venue</div>
+              <div className='event-desc'>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum
+              </div>
+            </div>
+          </div>
+
+
+          <div className='event-day-date'>Thursday, November 7th</div>
+          <div className='event-day'>
+            <div className='event-post'>
+              <div className='event-name'>Capture the Flag</div>
+              <div className='event-time'>XXXXXX XX, XXXXX</div>
+              <div className='event-venue'>Venue</div>
+              <div className='event-desc'>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum
+              </div>
+            </div>
+            <div className='event-post'>
+              <div className='event-name'>Prize distribution</div>
+              <div className='event-time'>XXXXXX XX, XXXXX</div>
+              <div className='event-venue'>Venue</div>
+              <div className='event-desc'>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum
+              </div>
+            </div>
+          </div>
+
+
+          <div className='event-day-date'>Friday, November 8th</div>
+          <div className='event-day'>
+            <div className='event-post'>
+              <div className='event-name'>Concert</div>
+              <div className='event-time'>XXXXXX XX, XXXXX</div>
+              <div className='event-venue'>Venue</div>
+              <div className='event-desc'>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum
+              </div>
+            </div>
+          </div>
+
+
+          <div className='event-day-date'>Saturday, November 9th</div>
+          <div className='event-day'>
+            <div className='event-post'>
+              <div className='event-name'>Stranger Bands</div>
+              <div className='event-time'>XXXXXX XX, XXXXX</div>
+              <div className='event-venue'>Venue</div>
+              <div className='event-desc'>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum
+              </div>
+            </div>
+            <div className='event-post'>
+              <div className='event-name'>PS5 in the Morning</div>
+              <div className='event-time'>XXXXXX XX, XXXXX</div>
+              <div className='event-venue'>Venue</div>
+              <div className='event-desc'>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum
+              </div>
+            </div>
+          </div>
+
+
+          <div className='event-day-date'>Sunday, November 10th</div>
+          <div className='event-day'>
+            <div className='event-post'>
+              <div className='event-name'>Arcade Games and Food stalls</div>
+              <div className='event-time'>XXXXXX XX, XXXXX</div>
+              <div className='event-venue'>Venue</div>
+              <div className='event-desc'>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum
+              </div>
+            </div>
+            <div className='event-post'>
+              <div className='event-name'>Open Mic</div>
+              <div className='event-time'>XXXXXX XX, XXXXX</div>
+              <div className='event-venue'>Venue</div>
+              <div className='event-desc'>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+
+    </>
+  );
 }
+
 export default Nexus1;

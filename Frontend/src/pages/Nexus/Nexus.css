@@ -1,13 +1,22 @@
 .nexus-cont {
     height: auto;
     width: 92vw;
-    padding: 15vh 2vw;
+    padding: 15vh 2vw 1vh 2vw;
     color: white;
+}
+
+.nexus-bg-cont {
+    background: url("/src/assets/images/18.jpg") no-repeat;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    filter: brightness(23%);
+    z-index: -10;
 }
 
 .nexus-title {
     color: #ffffff;
-    margin-top: 7vh;
+    margin-top: 13vh;
     font-size: 20vw;
     font-weight: 300;
     font-family: "GALSB", system-ui;
@@ -22,16 +31,30 @@
 .nexus-reg-link {
     font-size: 0.9vw;
     margin-bottom: 5vh;
+    margin-top: 1vh;
+}
+
+.winners-announcement-div {
+    margin-bottom: 15vh;
+}
+
+.winners-note {
+    font-size: 2vw;
+
 }
 
 .event-cont {
     display: flex;
     flex-direction: column;
-    gap: 5vh;
+}
+
+.event-heading {
+    font-size: 1.5vw;
 }
 
 .event-day-date {
     font-size: 1.5vw;
+    margin: 0 0 2vh 0;
 }
 
 .event-day {
@@ -64,6 +87,7 @@
 
 .event-desc {
     color: #a1a1a1;
+    margin: 1vh 0 6vh 0;
 }
 
 @media screen and (max-width: 992px) {

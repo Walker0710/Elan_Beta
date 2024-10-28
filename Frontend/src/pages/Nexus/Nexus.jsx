@@ -31,11 +31,6 @@ function Nexus() {
         </div>
 
 
-        <div className='winners-announcement-div'>
-          <div className='winners-note'>And for the Winners we have exclusive concert tickets by -<br/> Prateek Kuhad
-          </div>
-        </div>
-
 
         <div className='event-cont'>
           <div className='event-heading'>Events</div>

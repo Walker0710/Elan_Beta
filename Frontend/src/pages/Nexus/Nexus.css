@@ -114,18 +114,33 @@
 
     .nexus-reg-link {
         font-size: 5vw;
-        margin-top: 47vh;
+        margin-top: 58vh;
         margin-bottom: 5vh;
+    }
+
+
+    .winners-announcement-div {
+        margin-bottom: 10vh;
+    }
+
+    .winners-note {
+        font-size: 4vw;
+
     }
 
     .event-cont {
         display: flex;
         flex-direction: column;
-        gap: 3vh;
     }
 
+
+    .event-heading {
+        font-size: 10vw;
+    }
+
+
     .event-day-date {
-        margin-top: 5vh;
+        margin: 0 0 2vh 0;
         font-size: 6vw;
     }
 
@@ -135,6 +150,7 @@
         flex-wrap: wrap;
         gap: 5vw;
     }
+
 
 
 

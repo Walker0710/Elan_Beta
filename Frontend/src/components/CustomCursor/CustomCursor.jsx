@@ -39,6 +39,34 @@ const CustomCursor = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const cursor = cursorRef.current;
+
+    const handleMouseEnter = () => {
+      gsap.to(cursor, { scale: 10, duration: 0.3 });
+    };
+
+    const handleMouseLeave = () => {
+      gsap.to(cursor, { scale: 1, duration: 0.3 });
+    };
+
+    // Select the register button and add event listeners
+    const registerButton = document.querySelector('.register-button');
+    if (registerButton) {
+      registerButton.addEventListener('mouseenter', handleMouseEnter);
+      registerButton.addEventListener('mouseleave', handleMouseLeave);
+    }
+
+    // Clean up event listeners
+    return () => {
+      if (registerButton) {
+        registerButton.removeEventListener('mouseenter', handleMouseEnter);
+        registerButton.removeEventListener('mouseleave', handleMouseLeave);
+      }
+    };
+  }, []);
+
+
   return (
     <div className='cursor' id='cursor' ref={cursorRef}>
       <div className='cursor-text' id='cursor-text'></div>

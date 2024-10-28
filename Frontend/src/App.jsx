@@ -3,8 +3,7 @@ import Footer from '/src/components/Footer/Footer.jsx';
 import NavBar from '/src/components/NavBar/NavBar.jsx';
 import Accommodation from '/src/pages/Accommodation/Accommodation.jsx';
 import Competitions from '/src/pages/Competitions/Competitions.jsx';
-import Nexus from './pages/Nexus/Nexus';
-import Nexus1 from '/src/pages/Nexus1/Nexus1.jsx';
+import Nexus from '/src/pages/Nexus/Nexus.jsx';
 import Events from '/src/pages/Events/Events.jsx';
 import Home from '/src/pages/Home/Home.jsx';
 import SocialCause from '/src/pages/Social Cause/SocialCause.jsx';
@@ -48,14 +47,14 @@ function App() {
             <Competitions/>
             <Footer/>
           </>}/>
-          {/* <Route exact path='/nexus' element={<>
+          <Route exact path='/nexus' element={<>
             <NavBar/>
             <Nexus/>
             <Footer/>
-          </>}/> */}
+          </>}/>
           <Route exact path='/nexus' element={<>
             <NavBar/>
-            <Nexus1/>
+            <Nexus/>
             <Footer/>
           </>}/>
           <Route exact path='/workshops' element={<>
@@ -80,7 +79,7 @@ function App() {
           </>}/>
 
           <Route exact path='/nexus-registration' element={<>
-            {/* <NavBar/> */}
+            <NavBar/>
             <Form/>
             {/* <Footer/> */}
           </>}/>

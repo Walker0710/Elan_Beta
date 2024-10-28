@@ -2,7 +2,7 @@ import './Form.css';
 import VerticalMarquee from '../VerticalMarquee/VerticalMarquee.jsx';
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import './Form.css';
 
 const Form = () => {
@@ -33,29 +33,26 @@ const Form = () => {
         navigate('/nexus');
       }, 2000); // 2-second delay
     } catch (err) {
-      setError(err.response?.data?.message || 'An error occurred during registration.');
+      setError(err.response?.data?.message || 'An error occurred during registration!');
     }
   };
 
   return (
-    <div className="registration-form">
-      <VerticalMarquee />
-      <h2>Event Registration</h2>
-      {message && <p className="success-message">{message}</p>}
-      {error && <p className="error-message">{error}</p>}
-      <form onSubmit={handleSubmit}>
+    <div className="registration-form-cont">
+      <h2 className='registration-form-heading'>Register for Nexus</h2>
+      <form onSubmit={handleSubmit} className='registration-form'>
         <div>
-          <label>Name:</label>
+          <label className='name-label'>Name&nbsp;&nbsp;</label><br/>
           <input
-            type="text"
-            name="name"
+            type='text'
+            name='name'
             value={formData.name}
             onChange={handleChange}
             required
           />
         </div>
         <div>
-          <label>Email:</label>
+          <label className='email-label'>Email&nbsp;&nbsp;</label><br/>
           <input
             type="email"
             name="email"
@@ -65,14 +62,15 @@ const Form = () => {
           />
         </div>
         <div>
-          <label>Competition:</label>
+          <label className='competition-label'>Competition&nbsp;</label><br/>
           <select
             name="competition"
             value={formData.competition}
             onChange={handleChange}
             required
+            className='competition-selector'
           >
-            <option value="">Select Competition</option>
+            <option value="" className='competition-dropdown'>Select Competition </option>
             {competitions.map((comp) => (
               <option key={comp} value={comp}>
                 {comp}
@@ -80,8 +78,10 @@ const Form = () => {
             ))}
           </select>
         </div>
-        <button type="submit">Register</button>
+        <button type="submit" className='register-button'>Register</button>
       </form>
+      {message && <p className="success-message">{message}</p>}
+      {error && <p className="error-message">{error} Go back to <Link to='/nexus' className='underline-white'>Nexus&#8599;</Link></p>}
     </div>
   );
 };

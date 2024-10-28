@@ -18,80 +18,95 @@ function VerticalMarquee() {
     <>
       <div className='marquee-container' id='marquee-container'>
         <div className='marquee' id='marquee'>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
-          <span className='marquee-text'>Elan & <span className='marquee-eta'>&eta;</span>Vision</span>
+          <span className='marquee-text'>Elan & nVision</span>
           <span className='marquee-star'>&#10022;</span>
+          <span className='marquee-text'>Elan & nVision</span>
+          <span className='marquee-star'>&#10022;</span>
+          <span className='marquee-text'>Elan & nVision</span>
+          <span className='marquee-star'>&#10022;</span>
+          <span className='marquee-text'>Elan & nVision</span>
+          <span className='marquee-star'>&#10022;</span>
+          <span className='marquee-text'>Elan & nVision</span>
+          <span className='marquee-star'>&#10022;</span>
+          <span className='marquee-text'>Elan & nVision</span>
+          <span className='marquee-star'>&#10022;</span>
+          <span className='marquee-text'>Elan & nVision</span>
+          <span className='marquee-star'>&#10022;</span>
+          <span className='marquee-text'>Elan & nVision</span>
+          <span className='marquee-star'>&#10022;</span>
+
         </div>
       </div>
     </>

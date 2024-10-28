@@ -1,274 +1,145 @@
-.nexus-container {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+.nexus-cont {
     height: auto;
-    padding: 15vh 2vh 8vh 2vh;
-}
-
-.nexus-heading-form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 6vh;
-}
-
-.nexus-heading-stuff {
-
-}
-
-.nexus-heading {
-    font-size: 4.5vh;
-    font-weight: 300;
-    padding-bottom: 1vh;
-}
-
-.nexus-content-para {
-}
-
-.nexus-content-link-1 {
-}
-
-.nexus-full-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.nexus-personal-form {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-
-}
-
-.nexus-personal-input-div {
-    display: flex;
-    flex-direction: column;
-}
-
-.nexus-personal-input-label {
-    font-size: 2vh;
-    color: #cfcfcf;
-}
-
-.nexus-personal-input {
-    padding-left: 1vw;
-    font-size: 2vh;
-    color: black;
-    border: #fff solid 0.1px;
-}
-
-.nexus-step {
-    display: none;
-    opacity: 0;
-    transform: translateX(100%);
-    transition: opacity 0.3s ease, transform 0.5s ease;
-}
-
-.nexus-step-active {
-    display: block;
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.nexus-button-group {
-    display: flex;
-    justify-content: center;
-    gap: 160px;
-}
-
-.error-message {
-}
-
-.nexus-form-button {
-    padding: 10px 20px;
-    width: 200px;
-    border: white solid 0.7vw;
-    border-radius: 20px;
-    background: transparent;
+    width: 92vw;
+    padding: 15vh 2vw;
     color: white;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 20px;
 }
 
-.nexus-form-button:hover {
-    background-color: white;
-    color: black;
+.nexus-title {
+    color: #ffffff;
+    margin-top: 7vh;
+    font-size: 20vw;
+    font-weight: 300;
+    font-family: "GALSB", system-ui;
 }
 
-@media screen and (min-width: 992px) {
-    .nexus-container {
-        width: 100%;
-        padding: 240px 0 90px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: #fff;
-        margin-bottom: 50px;
-    }
+.nexus-description {
+    width: 70%;
+    color: #a1a1a1;
+    font-size: 1vw;
+}
 
-    .nexus-heading-form {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 5%;
-        width: 100%;
-    }
+.nexus-reg-link {
+    font-size: 0.9vw;
+    margin-bottom: 5vh;
+}
 
-    .nexus-heading {
-        position: relative;
-        margin-top: -180px;
-        margin-left: 40px;
-        font-size: 80px;
-        font-family: "enigma", serif;
-    }
+.event-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
 
-    .nexus-content-para {
-        color: #d1d1d1;
-        font-size: 0.9vw;
-        margin-left: 45px;
-        width: 800px;
-    }
+.event-day-date {
+    font-size: 1.5vw;
+}
 
-    .nexus-content-link-1 {
-        margin-left: 45px;
-        width: 800px;
-        margin-top: 50px;
-        font-size: 23px;
-    }
+.event-day {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5vw;
+}
 
-    .nexus-full-form {
-        margin-right: 170px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
 
-    .nexus-personal-form {
-        height: 800px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 40px;
-    }
 
-    .nexus-personal-input-div {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
+.event-post {
+    width: 27%;
+}
 
-    .nexus-personal-input-label {
-        font-size: 26px;
-    }
+.event-name {
+    font-size: 1vw;
+    margin-bottom: 0.1vh;
+}
 
-    .nexus-personal-input {
-        width: 560px;
-        height: 40px;
-        padding-left: 15px;
-        font-size: 20px;
-        color: black;
-        border: #fff solid 0.1px;
-    }
 
-    .nexus-step {
-        display: none;
-        opacity: 0;
-        transform: translateX(100%);
-        transition: opacity 0.3s ease, transform 0.5s ease;
-    }
 
-    .nexus-step-active {
-        display: block;
-        opacity: 1;
-        transform: translateX(0);
-    }
+.event-time {
+    font-size: 0.8vw;
+}
 
-    .nexus-button-group {
-        display: flex;
-        justify-content: center;
-        gap: 160px;
-    }
+.event-venue {
+    font-size: 0.8vw;
+}
 
-    .error-message {
-        color: red;
-        font-size: 0.9em;
-        margin-bottom: 10px;
-    }
+.event-desc {
+    color: #a1a1a1;
+}
 
-    .nexus-form-button {
-        padding: 10px 20px;
-        width: 200px;
-        border: white solid 0.2vw;
-        border-radius: 20px;
-        background: transparent;
+@media screen and (max-width: 992px) {
+    .nexus-cont {
+        height: auto;
+        width: 100vw;
+        padding: 10vh 5vw;
         color: white;
-        font-size: 16px;
-        cursor: pointer;
-        margin-top: 20px;
     }
 
-    .nexus-form-button:hover {
-        background-color: white;
-        color: black;
+    .nexus-title {
+        color: #ffffff;
+        margin-top: 7vh;
+        font-size: 20vw;
+        font-weight: 300;
+        font-family: "GALSB", system-ui;
     }
 
-    .nexus-progress-bar {
+    .nexus-description {
+        width: 100%;
+        color: #a1a1a1;
+        font-size: 3vw;
+    }
+
+    .nexus-reg-link {
+        font-size: 5vw;
+        margin-top: 47vh;
+        margin-bottom: 5vh;
+    }
+
+    .event-cont {
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+    }
+
+    .event-day-date {
+        margin-top: 5vh;
+        font-size: 6vw;
+    }
+
+    .event-day {
         position: relative;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-right: 180px;
-        padding: 0 10px;
+        flex-wrap: wrap;
+        gap: 5vw;
     }
 
-    .nexus-progress-line {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background-color: #ddd;
-        z-index: 1;
-        transform: translateY(-50%);
+
+
+    .event-post {
+        width: 100%;
     }
 
-    .nexus-progress-dot {
-        position: absolute;
-        top: 50%;
-        height: 16px;
-        width: 16px;
-        background-color: red;
-        border-radius: 30%;
-        transform: translateY(-50%);
-        z-index: 2;
-        transition: left 0.5s ease-in-out;
+    .event-name {
+        font-size: 5vw;
+        margin-bottom: 0.1vh;
     }
 
-    .nexus-progress-step-all {
-        display: flex;
+
+
+    .event-time {
+        font-size: 3.5vw;
     }
 
-    .nexus-progress-step {
-        flex: 1;
-        margin-top: -80px;
-        text-align: center;
-        padding: 90px 145px;
-        font-weight: bold;
-        color: white;
-        font-family: 'Poppins', sans-serif;
-        font-size: 18px;
-        position: relative;
-        z-index: 3;
-        cursor: default;
+    .event-venue {
+        font-size: 3.5vw;
     }
 
-    .nexus-progress-step.active {
-        color: red;
+
+    .event-desc {
+        color: #a1a1a1;
+        font-size: 3vw;
     }
+
 }
+
+
+

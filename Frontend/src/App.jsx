@@ -81,7 +81,7 @@ function App() {
           <Route exact path='/nexus-registration' element={<>
             <NavBar/>
             <Form/>
-            {/* <Footer/> */}
+            <Footer/>
           </>}/>
 
 

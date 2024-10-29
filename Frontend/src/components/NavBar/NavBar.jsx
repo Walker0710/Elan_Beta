@@ -103,7 +103,7 @@ function NavBar() {
             <Link to='/competitions'>COMPETITIONS</Link>
           </div>
           <div className='mobile-hide'>
-            <Link to='/socialcause'>SOCIAL CAUSE</Link>
+            <Link to='/nexus'>NEXUS</Link>
           </div>
           <div className='mobile-hide'>
             <Link to='/workshops'>WORKSHOPS</Link>

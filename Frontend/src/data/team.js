@@ -1,18 +1,5 @@
 import mehul from '/src/assets/team_images/Mehul_OC - Elan & ηVision IIT Hyderabad.jpg';
 import vighnesh from '/src/assets/team_images/Vighnesh_Vice overall coordinator.jpg';
-export const overall = [
-  {
-    name: 'Mehul Srivastava',
-    position: 'Overall coordinator',
-    image: mehul
-  },
-  {
-    name: 'Vighnesh Sreepathi',
-    position: 'Vice overall coordinator',
-    image: vighnesh
-  }
-];
-
 import Anirudh from '/src/assets/team_images/Anirudh_Techy&Workshops_Domainhead.jpeg';
 import tanmay from '/src/assets/team_images/Tanmay_Pronites & Production_Domain head.jpg';
 import aditya from '/src/assets/team_images/Aditya_Sponsorship_domain head.jpg';
@@ -25,7 +12,88 @@ import aryan from '/src/assets/team_images/Aryan_Culti&Biggies_Domain Head.jpg';
 import ananya from '/src/assets/team_images/Ananya S Reddy_PR_publicity_web_domain head.jpg';
 import dhruv from '/src/assets/team_images/Dhruv_PR_Publicity_Web_domain head.jpg';
 import katari from '/src/assets/team_images/Siri_Hospitality & Transport_Domain head.jpg';
-import aashrita from '/src/assets/team_images/Aashrita_Venishetty_logistics_domain head.jpg'
+import aashrita from '/src/assets/team_images/Aashrita_Venishetty_logistics_domain head.jpg';
+import mashetty from '/src/assets/team_images/Soham Mahshetty_Workshop_Cordinator.jpg';
+import Gunturi from '/src/assets/team_images/Sri Ujwal Gunturi_Workshop_Coordinator.jpg';
+import Kasireddy from '/src/assets/team_images/Rishikesh Kasireddy_Workshop_Coordinator.jpeg';
+import ashwath from '/src/assets/team_images/Ashwath_Techy_Coordinator.jpg';
+import kowsith from '/src/assets/team_images/Kowsith Gurubilli_techy_coordinator.jpg';
+import abhijit from '/src/assets/team_images/Abhijit Kashyap_techy_coordinator.jpg';
+import kunal from '/src/assets/team_images/Kunal_Production_Coordinator.jpg';
+import banjari from '/src/assets/team_images/Tanmay_production_Coordinator.jpg';
+import ajjarapu from '/src/assets/team_images/Sai Charan Ajjarapu_Pronites_Coordinator.jpg';
+import hiba from '/src/assets/team_images/Hiba_pronites_coordinator.jpg';
+import aryanaggarwal from '/src/assets/team_images/Aryan Agarwal_Sponsorship_Coordinator.jpg';
+import adhyant from '/src/assets/team_images/Adhyant_Sponsorship_coordinator.jpg';
+import vishwesh from '/src/assets/team_images/Vishwesh_Sponsorship_Coordinator.jpg';
+import harshavardhan from '/src/assets/team_images/Harsha Vardhan_Sponsorship_coordinator.jpg';
+import girijesh from '/src/assets/team_images/Girijesh Dasari_Sponsorship_Coordinator.jpg';
+import harshil from '/src/assets/team_images/Harshil_Sponsorship_coordinator.jpg';
+import abhinavshyam from '/src/assets/team_images/Abhinav Shyam_Sponsorship_coordinator.jpg';
+import azeem from '/src/assets/team_images/Azeem KImthiaz_Sponsorship_coordinator.jpg';
+import pushpraj from '/src/assets/team_images/Pushpraj_infra_Coordinatror.jpg';
+import rohit from '/src/assets/team_images/Rohit_infrastructure_Coordinator.jpg';
+import krishna from '/src/assets/team_images/Krishna Teja_infra_coordinator.jpg';
+import vamsi from '/src/assets/team_images/VAMSI_INFRASTRUCTURE_COORDINATOR.jpg';
+import ganeshwar from '/src/assets/team_images/Ganeswar_Security_Coordinator.jpg';
+import pranathi from '/src/assets/team_images/Mangamuri Venkata Pranathi_security_Coordinator.jpeg';
+import aashna from '/src/assets/team_images/Aashna_Informals_coordinator.jpg';
+import yakarthik from '/src/assets/team_images/Yakkala Amarnath Karthik_infor,mals_coordinator.jpg';
+import dhruvgoyal from '/src/assets/team_images/Dhruv Goyal_informals_coordinator.jpg';
+import goutham from '/src/assets/team_images/Goutham_Informals_Coordinator.jpg';
+import siva from '/src/assets/team_images/Sivaneasan_SocialCause_Coordinator.jpg';
+import mishal from '/src/assets/team_images/Mishal Sharaf_Creatives-Coordinator.jpg';
+import shreevel from '/src/assets/team_images/Shreevel K J_creatives_coordinator.jpg';
+import anjali from '/src/assets/team_images/Anjali Uikey_Creatives_coordinator.jpg';
+import parvathy from '/src/assets/team_images/Parvathy Sujith_Creatives_Coordinator.jpg';
+import vikas from '/src/assets/team_images/Vikas Addakula_Creatives_Coordinator.jpg';
+import pranav from '/src/assets/team_images/Pranav_Creatives_Coordinator.png';
+import kush from '/src/assets/team_images/Kushagra Upadhyay_Multimedia_Coordinator.jpg';
+import raghav from '/src/assets/team_images/Raghav_Multimedia_Coordinator.jpg';
+import Lalith from '/src/assets/team_images/Ramuni Lalith Vishnu_Operations - Ramuni Lalith Vishnu.jpg';
+import Pritam from '/src/assets/team_images/Pritam Kumar Mandal_multimedia_Coordinator.jpg';
+import abhinya from '/src/assets/team_images/Gogula Abhignya-Culti&biggies_coordinator.jpg';
+import esha from '/src/assets/team_images/M Esha_culti&biggies_Coordinator.jpg';
+import prajwal from '/src/assets/team_images/prajwal_culti & biggies_Coordinator.jpg';
+import sinduri from '/src/assets/team_images/Sinduri Mekala_culti&biggies_Coordinator.jpg';
+import enosh from '/src/assets/team_images/Enosh Andrade_LIT_Coordinator.jpg';
+import eshaan from '/src/assets/team_images/eshaan_lit_Coordinator.png';
+import shubham from '/src/assets/team_images/ShubhamDadhich_EML_Cordinator.png';
+import tanvi from '/src/assets/team_images/Tanvi_PR_Coordinator.jpg';
+import saket from '/src/assets/team_images/SaketKashyap_PR_Coordinator.png';
+import rishabh from '/src/assets/team_images/Rishabh Duggal_Public relations_Coordinator.jpeg';
+import ansh from '/src/assets/team_images/Ansh Bhatia_PR_coordinator -.jpg';
+import Naishadha from '/src/assets/team_images/Naishadha_publicity_coordinator.jpg';
+import gayatri from '/src/assets/team_images/Vadla Gayatri Priya__publicity_coordinator.jpg';
+import Karthikeya from '/src/assets/team_images/Mahenderkar Karthikeya_publicity_coordinator.jpeg';
+import ajay from '/src/assets/team_images/Jatavath Ajay_Publicity_Coordinator.jpg';
+import mahani from '/src/assets/team_images/Mahani_publicity_Coordinator.jpg';
+import abhinavpillai from '/src/assets/team_images/Abhinav_publicity_coordinator.jpg';
+import vishank from '/src/assets/team_images/vishank_web_Cordinator.jpg';
+import akhilesh from '/src/assets/team_images/Sirivelu Akhilesh_Web_Coordinator.jpg';
+import ankush from '/src/assets/team_images/Ankush_Web_coordinator.jpg';
+import adityalad from '/src/assets/team_images/Aaditya lad_Hospitality_coordinator.jpg';
+import nistala from '/src/assets/team_images/Akhil Nistala_Hospitality - Nistala Sai Akhil.jpg';
+import chinmai from '/src/assets/team_images/Chinmai_Hospitality_coordinator.jpg';
+import aryangandhi from '/src/assets/team_images/Aryan_Hospitality_coordinator.jpg';
+import midhun from '/src/assets/team_images/SaiMidhun_Hospitality_Cordinator.jpg';
+import shreeja from '/src/assets/team_images/Shreeja_Hospitality_Coordinator.jpg';
+import sujan from '/src/assets/team_images/Sujan_transportation_Coordinator.jpg';
+import preetham from '/src/assets/team_images/Preetham Rachamalla_Transport_coordinator.jpg';
+import hamal from '/src/assets/team_images/Hamal_Logistics_Coordinator.png';
+
+export const overall = [
+  {
+    name: 'Mehul Srivastava',
+    position: 'Overall coordinator',
+    image: mehul
+  },
+  {
+    name: 'Vighnesh Sreepathi',
+    position: 'Vice overall coordinator',
+    image: vighnesh
+  }
+];
 
 
 export const heads = [
@@ -90,15 +158,11 @@ export const heads = [
     image: katari
   },
   {
-    name: "Aashrita Venishetty",
+    name: 'Aashrita Venishetty',
     position: 'Logistics head',
     image: aashrita
   }
 ];
-
-import mashetty from '/src/assets/team_images/Soham Mahshetty_Workshop_Cordinator.jpg';
-import Gunturi from '/src/assets/team_images/Sri Ujwal Gunturi_Workshop_Coordinator.jpg';
-import Kasireddy from '/src/assets/team_images/Rishikesh Kasireddy_Workshop_Coordinator.jpeg';
 
 export const workshop_team = [
   {
@@ -115,10 +179,6 @@ export const workshop_team = [
   }
 ];
 
-import ashwath from '/src/assets/team_images/Ashwath_Techy_Coordinator.jpg';
-import kowsith from '/src/assets/team_images/Kowsith Gurubilli_techy_coordinator.jpg';
-import abhijit from '/src/assets/team_images/Abhijit Kashyap_techy_coordinator.jpg';
-
 export const techy_team = [
   {
     name: 'Ashwath Elangovan',
@@ -134,9 +194,6 @@ export const techy_team = [
   }
 ];
 
-import kunal from '/src/assets/team_images/Kunal_Production_Coordinator.jpg';
-import banjari from '/src/assets/team_images/Tanmay_production_Coordinator.jpg';
-
 export const production_team = [
   {
     name: 'Kunal Thorawade',
@@ -148,9 +205,6 @@ export const production_team = [
   }
 ];
 
-import ajjarapu from '/src/assets/team_images/Sai Charan Ajjarapu_Pronites_Coordinator.jpg';
-import hiba from '/src/assets/team_images/Hiba_pronites_coordinator.jpg';
-
 export const pronites_team = [
   {
     name: 'Sai Charan Ajjarapu',
@@ -161,15 +215,6 @@ export const pronites_team = [
     image: hiba
   }
 ];
-
-import aryanaggarwal from '/src/assets/team_images/Aryan Agarwal_Sponsorship_Coordinator.jpg';
-import adhyant from '/src/assets/team_images/Adhyant_Sponsorship_coordinator.jpg';
-import vishwesh from '/src/assets/team_images/Vishwesh_Sponsorship_Coordinator.jpg';
-import harshavardhan from '/src/assets/team_images/Harsha Vardhan_Sponsorship_coordinator.jpg';
-import girijesh from '/src/assets/team_images/Girijesh Dasari_Sponsorship_Coordinator.jpg';
-import harshil from '/src/assets/team_images/Harshil_Sponsorship_coordinator.jpg';
-import abhinavshyam from '/src/assets/team_images/Abhinav Shyam_Sponsorship_coordinator.jpg';
-import azeem from '/src/assets/team_images/Azeem KImthiaz_Sponsorship_coordinator.jpg';
 
 export const sponsorship_team = [
   {
@@ -206,11 +251,6 @@ export const sponsorship_team = [
   }
 ];
 
-import pushpraj from '/src/assets/team_images/Pushpraj_infra_Coordinatror.jpg';
-import rohit from '/src/assets/team_images/Rohit_infrastructure_Coordinator.jpg';
-import krishna from '/src/assets/team_images/Krishna Teja_infra_coordinator.jpg';
-import vamsi from '/src/assets/team_images/VAMSI_INFRASTRUCTURE_COORDINATOR.jpg';
-
 export const infrastructure_team = [
   {
     name: 'Pushpraj Singh Khichi',
@@ -230,9 +270,6 @@ export const infrastructure_team = [
   }
 ];
 
-import ganeshwar from '/src/assets/team_images/Ganeswar_Security_Coordinator.jpg';
-import pranathi from '/src/assets/team_images/Mangamuri Venkata Pranathi_security_Coordinator.jpeg';
-
 export const security_team = [
   {
     name: 'Ganeshwar Velvadapu',
@@ -244,19 +281,14 @@ export const security_team = [
   }
 ];
 
-import aashna from '/src/assets/team_images/Aashna_Informals_coordinator.jpg';
-import vakarthik from '/src/assets/team_images/Yakkala Amarnath Karthik_infor,mals_coordinator.jpg';
-import dhruvgoyal from '/src/assets/team_images/Dhruv Goyal_informals_coordinator.jpg';
-import goutham from '/src/assets/team_images/Goutham_Informals_Coordinator.jpg';
-
 export const informals_team = [
   {
     name: 'Aashna Sahu',
     image: aashna
   },
   {
-    name: 'V A Karthik',
-    image: vakarthik
+    name: 'Y A Karthik',
+    image: yakarthik
   },
   {
     name: 'Dhruv Goyal',
@@ -268,21 +300,12 @@ export const informals_team = [
   }
 ];
 
-import siva from '/src/assets/team_images/Sivaneasan_SocialCause_Coordinator.jpg';
-
 export const social_cause_team = [
   {
     name: 'Sivaneasan',
     image: siva
   }
 ];
-
-import mishal from '/src/assets/team_images/Mishal Sharaf_Creatives-Coordinator.jpg';
-import shreevel from '/src/assets/team_images/Shreevel K J_creatives_coordinator.jpg';
-import anjali from '/src/assets/team_images/Anjali Uikey_Creatives_coordinator.jpg';
-import parvathy from '/src/assets/team_images/Parvathy Sujith_Creatives_Coordinator.jpg';
-import vikas from '/src/assets/team_images/Vikas Addakula_Creatives_Coordinator.jpg';
-import pranav from '/src/assets/team_images/Pranav_Creatives_Coordinator.png'
 
 export const creatives_team = [
   {
@@ -311,11 +334,6 @@ export const creatives_team = [
   }
 ];
 
-import kush from '/src/assets/team_images/Kushagra Upadhyay_Multimedia_Coordinator.jpg';
-import raghav from '/src/assets/team_images/Raghav_Multimedia_Coordinator.jpg';
-import Lalith from '/src/assets/team_images/Ramuni Lalith Vishnu_Operations - Ramuni Lalith Vishnu.jpg';
-import Pritam from '/src/assets/team_images/Pritam Kumar Mandal_multimedia_Coordinator.jpg';
-
 export const multimedia_team = [
   {
     name: 'Kush Upadhyay',
@@ -334,11 +352,6 @@ export const multimedia_team = [
     image: Pritam
   }
 ];
-
-import abhinya from '/src/assets/team_images/Gogula Abhignya-Culti&biggies_coordinator.jpg';
-import esha from '/src/assets/team_images/M Esha_culti&biggies_Coordinator.jpg';
-import prajwal from '/src/assets/team_images/prajwal_culti & biggies_Coordinator.jpg';
-import sinduri from '/src/assets/team_images/Sinduri Mekala_culti&biggies_Coordinator.jpg';
 
 export const culti_biggies_team = [
   {
@@ -359,9 +372,6 @@ export const culti_biggies_team = [
   }
 ];
 
-import enosh from '/src/assets/team_images/Enosh Andrade_LIT_Coordinator.jpg';
-import eshaan from '/src/assets/team_images/eshaan_lit_Coordinator.png';
-
 export const lit_team = [
   {
     name: 'Enosh Andrade',
@@ -373,19 +383,12 @@ export const lit_team = [
   }
 ];
 
-import shubham from '/src/assets/team_images/ShubhamDadhich_EML_Cordinator.png';
-
 export const eml_team = [
   {
     name: 'Shubham Dadhich',
     image: shubham
   }
 ];
-
-import tanvi from '/src/assets/team_images/Tanvi_PR_Coordinator.jpg';
-import saket from '/src/assets/team_images/SaketKashyap_PR_Coordinator.png';
-import rishabh from '/src/assets/team_images/Rishabh Duggal_Public relations_Coordinator.jpeg';
-import ansh from '/src/assets/team_images/Ansh Bhatia_PR_coordinator -.jpg';
 
 export const public_relations_team = [
   {
@@ -405,13 +408,6 @@ export const public_relations_team = [
     image: ansh
   }
 ];
-
-import Naishadha from '/src/assets/team_images/Naishadha_publicity_coordinator.jpg'
-import gayatri from '/src/assets/team_images/Vadla Gayatri Priya__publicity_coordinator.jpg';
-import Karthikeya from '/src/assets/team_images/Mahenderkar Karthikeya_publicity_coordinator.jpeg';
-import ajay from '/src/assets/team_images/Jatavath Ajay_Publicity_Coordinator.jpg';
-import mahani from '/src/assets/team_images/Mahani_publicity_Coordinator.jpg';
-import abhinavpillai from '/src/assets/team_images/Abhinav_publicity_coordinator.jpg';
 
 export const publicity_team = [
   {
@@ -440,10 +436,6 @@ export const publicity_team = [
   }
 ];
 
-import vishank from '/src/assets/team_images/vishank_web_Cordinator.jpg';
-import akhilesh from '/src/assets/team_images/Sirivelu Akhilesh_Web_Coordinator.jpg';
-import ankush from '/src/assets/team_images/Ankush_Web_coordinator.jpg';
-
 export const web_team = [
   {
     name: 'Vishank Singh',
@@ -458,13 +450,6 @@ export const web_team = [
     image: ankush
   }
 ];
-
-import adityalad from '/src/assets/team_images/Aaditya lad_Hospitality_coordinator.jpg';
-import nistala from '/src/assets/team_images/Akhil Nistala_Hospitality - Nistala Sai Akhil.jpg';
-import chinmai from '/src/assets/team_images/Chinmai_Hospitality_coordinator.jpg';
-import aryangandhi from '/src/assets/team_images/Aryan_Hospitality_coordinator.jpg';
-import midhun from '/src/assets/team_images/SaiMidhun_Hospitality_Cordinator.jpg';
-import shreeja from '/src/assets/team_images/Shreeja_Hospitality_Coordinator.jpg';
 
 export const hospitality_team = [
   {
@@ -493,9 +478,6 @@ export const hospitality_team = [
   }
 ];
 
-import sujan from '/src/assets/team_images/Sujan_transportation_Coordinator.jpg';
-import preetham from '/src/assets/team_images/Preetham Rachamalla_Transport_coordinator.jpg';
-
 export const transport_team = [
   {
     name: 'Sujan Rada',
@@ -507,14 +489,12 @@ export const transport_team = [
   }
 ];
 
-import hamal from '/src/assets/team_images/Hamal_Logistics_Coordinator.png'
-
 export const logistics_team = [
   {
     name: 'Hamal Daniel',
     image: hamal
-  },
-]
+  }
+];
 
 
 

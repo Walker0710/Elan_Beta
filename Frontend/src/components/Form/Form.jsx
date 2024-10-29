@@ -1,8 +1,8 @@
 import './Form.css';
 import VerticalMarquee from '../VerticalMarquee/VerticalMarquee.jsx';
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import axios from 'axios';
-import { Link, useNavigate } from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -18,7 +18,7 @@ const Form = () => {
     teammate4Name: '',
     teammate4Email: '',
     teammate5Name: '',
-    teammate5Email: '',
+    teammate5Email: ''
   });
 
   const [message, setMessage] = useState(null);
@@ -26,8 +26,8 @@ const Form = () => {
   const navigate = useNavigate();
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    const {name, value} = e.target;
+    setFormData({...formData, [name]: value});
   };
 
   const isValidIithEmail = (email) => {
@@ -40,7 +40,7 @@ const Form = () => {
     setMessage(null);
 
     // Validate that all email fields end with @iith.ac.in
-    const { leaderEmail, teammate1Email, teammate2Email, teammate3Email, teammate4Email, teammate5Email } = formData;
+    const {leaderEmail, teammate1Email, teammate2Email, teammate3Email, teammate4Email, teammate5Email} = formData;
     if (
       !isValidIithEmail(leaderEmail) ||
       !isValidIithEmail(teammate1Email) ||
@@ -54,7 +54,7 @@ const Form = () => {
     }
 
     try {
-      const response = await axios.post('https://api.elan.org.in/api/register', formData, { withCredentials: true });
+      const response = await axios.post('https://api.elan.org.in/api/register', formData, {withCredentials: true});
       // const response = await axios.post('http://localhost:5000/api/register', formData, { withCredentials: true });
 
       setMessage('Registration successful! Redirecting...');
@@ -71,7 +71,7 @@ const Form = () => {
         teammate4Name: '',
         teammate4Email: '',
         teammate5Name: '',
-        teammate5Email: '',
+        teammate5Email: ''
       });
 
       console.log(response.data);
@@ -86,14 +86,14 @@ const Form = () => {
 
   return (
     <>
-      <VerticalMarquee />
+      <VerticalMarquee/>
       <div className='registration-form-cont'>
         <h2 className='registration-form-heading'>Register for Nexus</h2>
         <form onSubmit={handleSubmit} className='registration-form'>
 
           <h3>Leader Information</h3>
           <div>
-            <label className='name-label'>Leader Name&nbsp;&nbsp;</label><br />
+            <label className='name-label'>Leader Name&nbsp;&nbsp;</label><br/>
             <input
               type='text'
               name='leaderName'
@@ -103,7 +103,7 @@ const Form = () => {
             />
           </div>
           <div>
-            <label className='email-label'>Leader Email&nbsp;&nbsp;</label><br />
+            <label className='email-label'>Leader Email&nbsp;&nbsp;</label><br/>
             <input
               type='email'
               name='leaderEmail'
@@ -113,7 +113,7 @@ const Form = () => {
             />
           </div>
           <div>
-            <label className='phone-label'>Leader Phone&nbsp;&nbsp;</label><br />
+            <label className='phone-label'>Leader Phone&nbsp;&nbsp;</label><br/>
             <input
               type='tel'
               name='leaderPhone'
@@ -126,7 +126,7 @@ const Form = () => {
           <h3>Teammates Information</h3>
           {[1, 2, 3, 4, 5].map((index) => (
             <div key={index} className='teammate-info'>
-              <label>Teammate {index} Name&nbsp;&nbsp;</label><br />
+              <label>Teammate {index} Name&nbsp;&nbsp;</label><br/>
               <input
                 type='text'
                 name={`teammate${index}Name`}
@@ -134,7 +134,7 @@ const Form = () => {
                 onChange={handleChange}
                 required
               /><br/>
-              <label>Teammate {index} Email&nbsp;&nbsp;</label><br />
+              <label>Teammate {index} Email&nbsp;&nbsp;</label><br/>
               <input
                 type='email'
                 name={`teammate${index}Email`}

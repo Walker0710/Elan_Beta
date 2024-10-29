@@ -28,7 +28,7 @@
 
 }
 
-input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"] {
     width: 30%;
     padding: 10px;
     margin: 0.4vh 0;
@@ -40,12 +40,12 @@ input[type="text"], input[type="email"], input[type="password"], input[type="num
     transition: border-color 0.3s ease;
 }
 
-input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="number"]:focus {
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="tel"]:focus {
     border-color: #af4c4c;
     outline: none;
 }
 
-input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"]:disabled, input[type="number"]:disabled {
+input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"]:disabled, input[type="tel"]:disabled {
     background-color: #e0e0e0;
     color: #888;
 }

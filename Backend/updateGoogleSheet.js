@@ -1,6 +1,5 @@
 const { google } = require('googleapis');
 const mongoose = require('mongoose');
-const cron = require('node-cron');
 require('dotenv').config();
 
 // Import the Participant model
@@ -44,6 +43,7 @@ const formatParticipantData = (participant) => {
         participant.teammate3Name, participant.teammate3Email,
         participant.teammate4Name, participant.teammate4Email,
         participant.teammate5Name, participant.teammate5Email,
+        participant.teammate6Name, participant.teammate6Email,
     ];
 
     return [...leaderData, ...teammatesData];
@@ -66,13 +66,11 @@ async function appendToSheet(data) {
     }
 }
 
-// Function to fetch new participants and update Google Sheets
-const updateSheetWithNewParticipants = async () => {
+// Function to fetch all participants and update Google Sheets
+const updateSheetWithAllParticipants = async () => {
     try {
-        // Fetch participants registered within the last hour
-        const participants = await Participant.find({
-            registeredAt: { $gte: new Date(Date.now() - 60 * 60 * 1000) },
-        });
+        // Fetch all participants from the MongoDB collection
+        const participants = await Participant.find();
 
         if (participants.length > 0) {
             // Format participant data for Google Sheets
@@ -81,18 +79,12 @@ const updateSheetWithNewParticipants = async () => {
             // Append participants data to Google Sheet
             await appendToSheet(dataToAppend);
         } else {
-            console.log('No new participants to append.');
+            console.log('No participants found to append.');
         }
     } catch (error) {
         console.error('Error fetching participants from MongoDB:', error);
     }
 };
 
-// Schedule the task to run every hour
-cron.schedule('0 * * * *', () => {
-    console.log('Running scheduled task to update Google Sheets with new participants...');
-    updateSheetWithNewParticipants();
-});
-
-// Optionally, run the update immediately on startup
-updateSheetWithNewParticipants();
+// Run the update immediately
+updateSheetWithAllParticipants();

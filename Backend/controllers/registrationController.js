@@ -2,6 +2,7 @@ const Participant = require('../models/Participant');
 
 const registerParticipant = async (req, res) => {
   const {
+    teamName,
     leaderName,
     leaderEmail,
     leaderPhone,
@@ -9,17 +10,17 @@ const registerParticipant = async (req, res) => {
     teammate2Name, teammate2Email,
     teammate3Name, teammate3Email,
     teammate4Name, teammate4Email,
-    teammate5Name, teammate5Email
+    teammate5Name, teammate5Email,
+    teammate6Name, teammate6Email
   } = req.body;
 
   // Validate required fields
   if (
-    !leaderName || !leaderEmail || !leaderPhone ||
+    !teamName || !leaderName || !leaderEmail || !leaderPhone ||
     !teammate1Name || !teammate1Email ||
     !teammate2Name || !teammate2Email ||
     !teammate3Name || !teammate3Email ||
-    !teammate4Name || !teammate4Email ||
-    !teammate5Name || !teammate5Email
+    !teammate4Name || !teammate4Email
   ) {
     return res.status(400).json({ message: 'All leader and teammate information is required' });
   }
@@ -31,7 +32,7 @@ const registerParticipant = async (req, res) => {
   }
 
   // Check for existing teammates' emails
-  const teammateEmails = [teammate1Email, teammate2Email, teammate3Email, teammate4Email, teammate5Email];
+  const teammateEmails = [teammate1Email, teammate2Email, teammate3Email, teammate4Email, teammate5Email, teammate6Email].filter(Boolean); // Filter out any undefined emails
   const existingTeammates = await Participant.find({
     $or: teammateEmails.map(email => ({
       $or: [
@@ -39,7 +40,8 @@ const registerParticipant = async (req, res) => {
         { teammate2Email: email },
         { teammate3Email: email },
         { teammate4Email: email },
-        { teammate5Email: email }
+        { teammate5Email: email },
+        { teammate6Email: email }
       ]
     }))
   });
@@ -50,6 +52,7 @@ const registerParticipant = async (req, res) => {
 
   try {
     const participant = new Participant({
+      teamName,
       leaderName,
       leaderEmail,
       leaderPhone,
@@ -58,6 +61,7 @@ const registerParticipant = async (req, res) => {
       teammate3Name, teammate3Email,
       teammate4Name, teammate4Email,
       teammate5Name, teammate5Email,
+      teammate6Name, teammate6Email,
     });
 
     await participant.save();

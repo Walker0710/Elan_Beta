@@ -27,7 +27,7 @@ const Form = () => {
       idx === index ? {...teammate, [field]: value} : teammate
     );
     setFormData({...formData, teammates: newTeammates});
-
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();

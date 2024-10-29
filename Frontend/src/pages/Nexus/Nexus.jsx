@@ -34,6 +34,16 @@ function Nexus() {
 
         <div className='event-cont'>
           <div className='event-heading'>Events</div>
+          <div className='details-div'>
+            <a
+              href='https://drive.google.com/file/d/1C2kx9MfuUPesSqyKQgJ4iZadh3K6xSr6/view'
+              rel='noopener noreferrer'
+              target='_blank'
+              className='underline-white'>
+              More details&#8599;
+            </a>
+          </div>
+
           <div className='event-day-date'>Monday, November 4th</div>
           <div className='event-day'>
 
@@ -94,7 +104,7 @@ function Nexus() {
 
           </div>
 
-          <div className='event-day-date'>Thursday, November 7th</div>
+          <div className='event-day-date'>Sunday, November 10th</div>
           <div className='event-day'>
             <div className='event-post'>
               <div className='event-name'>Capture the Flag</div>

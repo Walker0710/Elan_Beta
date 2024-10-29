@@ -34,23 +34,19 @@
     margin-top: 1vh;
 }
 
-.winners-announcement-div {
-    margin-bottom: 15vh;
-}
-
-.winners-note {
-    font-size: 2vw;
-
-}
-
 .event-cont {
     display: flex;
     flex-direction: column;
 }
 
 .event-heading {
-    margin: 2vh 0 3vh 0;
+    margin: 2vh 0 1vh 0;
     font-size: 3vw;
+}
+
+.details-div {
+    margin: 0 0 6vh 0;
+    font-size: 0.9vw;
 }
 
 .event-day-date {
@@ -120,26 +116,20 @@
         margin-bottom: 5vh;
     }
 
-
-    .winners-announcement-div {
-        margin-bottom: 10vh;
-    }
-
-    .winners-note {
-        font-size: 4vw;
-
-    }
-
     .event-cont {
         display: flex;
         flex-direction: column;
     }
 
-
     .event-heading {
+        margin: 0 0 1vh 0;
         font-size: 10vw;
     }
 
+    .details-div {
+        margin: 0 0 6vh 0;
+        font-size: 3.5vw;
+    }
 
     .event-day-date {
         margin: 0 0 2vh 0;

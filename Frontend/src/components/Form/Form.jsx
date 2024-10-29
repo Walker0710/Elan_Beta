@@ -133,8 +133,8 @@ const Form = () => {
                 value={formData[`teammate${index}Name`]}
                 onChange={handleChange}
                 required
-              />
-              <label>Email&nbsp;&nbsp;</label><br />
+              /><br/>
+              <label>Teammate {index} Email&nbsp;&nbsp;</label><br />
               <input
                 type='email'
                 name={`teammate${index}Email`}

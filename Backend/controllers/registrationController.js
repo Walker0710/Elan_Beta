@@ -1,65 +1,27 @@
-// const Participant = require('../models/Participant');
-
-// const registerParticipant = async (req, res) => {
-//   const { leaderName, leaderEmail, leaderPhone, teammates } = req.body;
-
-//   // Validate required fields
-//   if (!leaderName || !leaderEmail || !leaderPhone) {
-//     return res.status(400).json({ message: 'Leader information is required' });
-//   }
-
-  // Validate teammates
-  // const validTeammates = teammates.every(
-  //   (teammate, index) => 
-  //     teammate.name && teammate.email || (index >= 4 && (!teammate.name && !teammate.email))
-  // );
-
-//   const validTeammates = teammates.every(
-//     (teammate, index) =>
-//       teammate.name && (teammate.email || (index >= 4 && !teammate.name && !teammate.email))
-//   );
-
-//   if (!validTeammates) {
-//     return res.status(400).json({ message: 'Please provide valid information for teammates' });
-//   }
-
-//   try {
-//     const participant = new Participant({
-//       leaderName,
-//       leaderEmail,
-//       leaderPhone,
-//       teammates: teammates.filter(teammate => teammate.name && teammate.email), // Only include teammates with complete info
-//     });
-
-//     await participant.save();
-//     res.status(201).json({ message: 'Registered successfully' });
-//   } catch (error) {
-//     console.error('Error saving participant:', error);
-//     res.status(500).json({ message: 'Registration failed', error });
-//   }
-// };
-
-// module.exports = registerParticipant;
-
-
 const Participant = require('../models/Participant');
 
 const registerParticipant = async (req, res) => {
-  const { leaderName, leaderEmail, leaderPhone, teammates } = req.body;
+  const {
+    leaderName,
+    leaderEmail,
+    leaderPhone,
+    teammate1Name, teammate1Email,
+    teammate2Name, teammate2Email,
+    teammate3Name, teammate3Email,
+    teammate4Name, teammate4Email,
+    teammate5Name, teammate5Email
+  } = req.body;
 
   // Validate required fields
-  if (!leaderName || !leaderEmail || !leaderPhone) {
-    return res.status(400).json({ message: 'Leader information is required' });
-  }
-
-  // Validate teammates
-  const validTeammates = teammates.every(
-    (teammate, index) =>
-      teammate.name && (teammate.email || (index >= 4 && !teammate.name && !teammate.email))
-  );
-
-  if (!validTeammates) {
-    return res.status(400).json({ message: 'Please provide valid information for teammates' });
+  if (
+    !leaderName || !leaderEmail || !leaderPhone ||
+    !teammate1Name || !teammate1Email ||
+    !teammate2Name || !teammate2Email ||
+    !teammate3Name || !teammate3Email ||
+    !teammate4Name || !teammate4Email ||
+    !teammate5Name || !teammate5Email
+  ) {
+    return res.status(400).json({ message: 'All leader and teammate information is required' });
   }
 
   // Check for existing participant with the same leader email
@@ -69,9 +31,17 @@ const registerParticipant = async (req, res) => {
   }
 
   // Check for existing teammates' emails
-  const teammatesEmails = teammates.map(teammate => teammate.email).filter(email => email);
+  const teammateEmails = [teammate1Email, teammate2Email, teammate3Email, teammate4Email, teammate5Email];
   const existingTeammates = await Participant.find({
-    $or: teammatesEmails.map(email => ({ 'teammates.email': email }))
+    $or: teammateEmails.map(email => ({
+      $or: [
+        { teammate1Email: email },
+        { teammate2Email: email },
+        { teammate3Email: email },
+        { teammate4Email: email },
+        { teammate5Email: email }
+      ]
+    }))
   });
 
   if (existingTeammates.length > 0) {
@@ -83,7 +53,11 @@ const registerParticipant = async (req, res) => {
       leaderName,
       leaderEmail,
       leaderPhone,
-      teammates: teammates.filter(teammate => teammate.name && teammate.email), // Only include teammates with complete info
+      teammate1Name, teammate1Email,
+      teammate2Name, teammate2Email,
+      teammate3Name, teammate3Email,
+      teammate4Name, teammate4Email,
+      teammate5Name, teammate5Email,
     });
 
     await participant.save();

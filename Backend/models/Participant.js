@@ -1,23 +1,20 @@
 const mongoose = require('mongoose');
 
-const teammateSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  email: { type: String, required: true, sparse: true},
-});
-
 const participantSchema = new mongoose.Schema({
   leaderName: { type: String, required: true },
-  leaderEmail: { type: String, required: true},
+  leaderEmail: { type: String, required: true, unique: true },
   leaderPhone: { type: String, required: true },
-  teammates: {
-    type: [teammateSchema],
-    validate: [arrayLimit, 'Exceeds the limit of 6 teammates'],
-  },
+  teammate1Name: { type: String, required: true },
+  teammate1Email: { type: String, required: true, unique: true },
+  teammate2Name: { type: String, required: true },
+  teammate2Email: { type: String, required: true, unique: true },
+  teammate3Name: { type: String, required: true },
+  teammate3Email: { type: String, required: true, unique: true },
+  teammate4Name: { type: String, required: true },
+  teammate4Email: { type: String, required: true, unique: true },
+  teammate5Name: { type: String, required: true },
+  teammate5Email: { type: String, required: true, unique: true },
   registeredAt: { type: Date, default: Date.now },
 });
 
-function arrayLimit(val) {
-  return val.length <= 6;
-}
-
-module.exports = mongoose.model('Participant', participantSchema);
+module.exports = mongoose.model('Participant', participantSchema, 'users');

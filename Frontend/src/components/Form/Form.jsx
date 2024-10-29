@@ -1,32 +1,37 @@
 import './Form.css';
 import VerticalMarquee from '../VerticalMarquee/VerticalMarquee.jsx';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
-import {Link, useNavigate} from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Form = () => {
   const [formData, setFormData] = useState({
     leaderName: '',
     leaderEmail: '',
     leaderPhone: '',
-    teammates: Array(6).fill({name: '', email: ''}),
+    teammate1Name: '',
+    teammate1Email: '',
+    teammate2Name: '',
+    teammate2Email: '',
+    teammate3Name: '',
+    teammate3Email: '',
+    teammate4Name: '',
+    teammate4Email: '',
+    teammate5Name: '',
+    teammate5Email: '',
   });
 
   const [message, setMessage] = useState(null);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-
   const handleChange = (e) => {
-    const {name, value} = e.target;
-    setFormData({...formData, [name]: value});
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
-  const handleTeammateChange = (index, field, value) => {
-    const newTeammates = formData.teammates.map((teammate, idx) =>
-      idx === index ? {...teammate, [field]: value} : teammate
-    );
-    setFormData({...formData, teammates: newTeammates});
+  const isValidIithEmail = (email) => {
+    return email.endsWith('@iith.ac.in');
   };
 
   const handleSubmit = async (e) => {
@@ -34,19 +39,42 @@ const Form = () => {
     setError(null);
     setMessage(null);
 
-    try {
+    // Validate that all email fields end with @iith.ac.in
+    const { leaderEmail, teammate1Email, teammate2Email, teammate3Email, teammate4Email, teammate5Email } = formData;
+    if (
+      !isValidIithEmail(leaderEmail) ||
+      !isValidIithEmail(teammate1Email) ||
+      !isValidIithEmail(teammate2Email) ||
+      !isValidIithEmail(teammate3Email) ||
+      !isValidIithEmail(teammate4Email) ||
+      !isValidIithEmail(teammate5Email)
+    ) {
+      setError('All emails must end with @iith.ac.in');
+      return;
+    }
 
-      const response = axios.post('https://api.elan.org.in/api/register', formData, { withCredentials: true });
-      // const response = axios.post('http://localhost:5000/api/register', formData, { withCredentials: true });
+    try {
+      const response = await axios.post('https://api.elan.org.in/api/register', formData, { withCredentials: true });
+      // const response = await axios.post('http://localhost:5000/api/register', formData, { withCredentials: true });
+
       setMessage('Registration successful! Redirecting...');
       setFormData({
         leaderName: '',
         leaderEmail: '',
         leaderPhone: '',
-        teammates: Array(6).fill({name: '', email: ''}),
+        teammate1Name: '',
+        teammate1Email: '',
+        teammate2Name: '',
+        teammate2Email: '',
+        teammate3Name: '',
+        teammate3Email: '',
+        teammate4Name: '',
+        teammate4Email: '',
+        teammate5Name: '',
+        teammate5Email: '',
       });
 
-      console.log(response.response.data);
+      console.log(response.data);
 
       setTimeout(() => {
         navigate('/nexus');
@@ -58,15 +86,14 @@ const Form = () => {
 
   return (
     <>
-      <VerticalMarquee/>
+      <VerticalMarquee />
       <div className='registration-form-cont'>
-
         <h2 className='registration-form-heading'>Register for Nexus</h2>
         <form onSubmit={handleSubmit} className='registration-form'>
-          
+
           <h3>Leader Information</h3>
           <div>
-            <label className='name-label'>Leader Name&nbsp;&nbsp;</label><br/>
+            <label className='name-label'>Leader Name&nbsp;&nbsp;</label><br />
             <input
               type='text'
               name='leaderName'
@@ -76,7 +103,7 @@ const Form = () => {
             />
           </div>
           <div>
-            <label className='email-label'>Leader Email&nbsp;&nbsp;</label><br/>
+            <label className='email-label'>Leader Email&nbsp;&nbsp;</label><br />
             <input
               type='email'
               name='leaderEmail'
@@ -86,7 +113,7 @@ const Form = () => {
             />
           </div>
           <div>
-            <label className='phone-label'>Leader Phone&nbsp;&nbsp;</label><br/>
+            <label className='phone-label'>Leader Phone&nbsp;&nbsp;</label><br />
             <input
               type='tel'
               name='leaderPhone'
@@ -97,21 +124,23 @@ const Form = () => {
           </div>
 
           <h3>Teammates Information</h3>
-          {formData.teammates.map((teammate, index) => (
+          {[1, 2, 3, 4, 5].map((index) => (
             <div key={index} className='teammate-info'>
-              <label>Teammate {index + 1} Name&nbsp;&nbsp;</label><br/>
+              <label>Teammate {index} Name&nbsp;&nbsp;</label><br />
               <input
                 type='text'
-                value={teammate.name}
-                onChange={(e) => handleTeammateChange(index, 'name', e.target.value)}
-                required={index < 4} // Required for the first 4 teammates, optional for 5 and 6
+                name={`teammate${index}Name`}
+                value={formData[`teammate${index}Name`]}
+                onChange={handleChange}
+                required
               />
-              <label>Email&nbsp;&nbsp;</label><br/>
+              <label>Email&nbsp;&nbsp;</label><br />
               <input
                 type='email'
-                value={teammate.email}
-                onChange={(e) => handleTeammateChange(index, 'email', e.target.value)}
-                required={index < 4}
+                name={`teammate${index}Email`}
+                value={formData[`teammate${index}Email`]}
+                onChange={handleChange}
+                required
               />
             </div>
           ))}
@@ -119,9 +148,11 @@ const Form = () => {
           <button type='submit' className='register-button'>Register</button>
         </form>
         {message && <p className='success-message'>{message}</p>}
-        {error && <p className='error-message'>{error} Go back to <Link to='/nexus'
-        className='underline-white'>Nexus&#8599;</Link>
-        </p>}
+        {error && (
+          <p className='error-message'>
+            {error} Go back to <Link to='/nexus' className='underline-white'>Nexus&#8599;</Link>
+          </p>
+        )}
       </div>
     </>
   );

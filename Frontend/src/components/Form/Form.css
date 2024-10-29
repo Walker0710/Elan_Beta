@@ -112,13 +112,6 @@ select[name="competition"]:focus {
         margin-bottom: 5vh;
     }
 
-    .name-label {
-    }
-
-    .email-label {
-
-    }
-
     input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
         width: 85%;
         padding: 10px;

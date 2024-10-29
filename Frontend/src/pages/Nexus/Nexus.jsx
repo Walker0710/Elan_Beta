@@ -43,7 +43,7 @@ function Nexus() {
             </a>
           </div>
 
-          <div className='event-day-date'>Sunday, November 3th</div>
+          <div className='event-day-date'>Sunday, November 3rd</div>
           <div className='event-day'>
             <div className='event-post'>
               <div className='event-name'>Capture the Flag</div>

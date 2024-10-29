@@ -50,8 +50,8 @@ const Form = () => {
     }
 
     try {
-      // const response = await axios.post('https://api.elan.org.in/api/register', formData, { withCredentials: true });
-      const response = await axios.post('http://localhost:5000/api/register', formData, { withCredentials: true });
+      const response = await axios.post('https://api.elan.org.in/api/register', formData, { withCredentials: true });
+      // const response = await axios.post('http://localhost:5000/api/register', formData, { withCredentials: true });
       setMessage('Registration successful! Redirecting...');
       setFormData({
         teamName: '',

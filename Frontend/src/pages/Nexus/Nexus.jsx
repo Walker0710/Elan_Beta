@@ -47,7 +47,7 @@ function Nexus() {
           <div className='event-day'>
             <div className='event-post'>
               <div className='event-name'>Capture the Flag</div>
-              <div className='event-time'>9:15 P.M - 11 P.M</div>
+              <div className='event-time'>8:30 P.M - 10:30 P.M</div>
               <div className='event-venue'>Old Mess Lawns</div>
               <div className='event-desc'>
                 Where teamwork, athleticism and observation all come together as you traverse through the campus in

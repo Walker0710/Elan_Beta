@@ -23,9 +23,9 @@
 }
 
 .nexus-description {
-    width: 70%;
+    width: 65%;
     color: #a1a1a1;
-    font-size: 1.4vw;
+    font-size: 1.2vw;
 }
 
 .nexus-reg-link {
@@ -107,12 +107,12 @@
     .nexus-description {
         width: 100%;
         color: #a1a1a1;
-        font-size: 3vw;
+        font-size: 4vw;
     }
 
     .nexus-reg-link {
         font-size: 5vw;
-        margin-top: 58vh;
+        margin-top: 50vh;
         margin-bottom: 5vh;
     }
 

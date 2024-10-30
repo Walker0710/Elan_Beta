@@ -39,6 +39,7 @@ const CustomCursor = () => {
     };
   }, []);
 
+  /*
   useEffect(() => {
     const cursor = cursorRef.current;
 
@@ -65,7 +66,7 @@ const CustomCursor = () => {
       }
     };
   }, []);
-
+*/
 
   return (
     <div className='cursor' id='cursor' ref={cursorRef}>

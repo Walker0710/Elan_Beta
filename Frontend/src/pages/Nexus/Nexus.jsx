@@ -15,8 +15,8 @@ function Nexus() {
         <div className='nexus-title'>Nexus</div>
 
         <div className='nexus-description'>
-          A pre-fest informal Fiesta, where everyone form a team of size 5-7 and participate in exciting events everyday
-          to win amazing prizes.
+          A pre-fest Informal Fiesta, where teams of size 5-7 battle out through exciting events everyday to win
+          exclusive tickets to Prateek Kuhad's concert in Hyderabad on November 8!
 
         </div>
         <div className='nexus-reg-link'>
@@ -43,11 +43,11 @@ function Nexus() {
             </a>
           </div>
 
-          <div className='event-day-date'>Sunday, November 3th</div>
+          <div className='event-day-date'>Sunday, November 3rd</div>
           <div className='event-day'>
             <div className='event-post'>
               <div className='event-name'>Capture the Flag</div>
-              <div className='event-time'>9:15 P.M - 11 P.M</div>
+              <div className='event-time'>8:30 P.M - 10:30 P.M</div>
               <div className='event-venue'>Old Mess Lawns</div>
               <div className='event-desc'>
                 Where teamwork, athleticism and observation all come together as you traverse through the campus in

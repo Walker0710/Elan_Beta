@@ -88,7 +88,7 @@ const Form = () => {
         <form onSubmit={handleSubmit} className='registration-form'>
 
           <h3>Team Information</h3>
-          <div>
+          <div className='indented-divs'>
             <label>Team Name&nbsp;&nbsp;</label><br />
             <input
               type='text'
@@ -100,7 +100,7 @@ const Form = () => {
           </div>
 
           <h3>Leader Information</h3>
-          <div>
+          <div className='indented-divs'>
             <label>Leader Name&nbsp;&nbsp;</label><br />
             <input
               type='text'
@@ -110,7 +110,7 @@ const Form = () => {
               required
             />
           </div>
-          <div>
+          <div className='indented-divs'>
             <label>Leader Email&nbsp;&nbsp;</label><br />
             <input
               type='email'
@@ -120,7 +120,7 @@ const Form = () => {
               required
             />
           </div>
-          <div>
+          <div className='indented-divs'>
             <label>Leader Phone&nbsp;&nbsp;</label><br />
             <input
               type='tel'
@@ -133,7 +133,7 @@ const Form = () => {
 
           <h3>Teammates Information</h3>
           {[1, 2, 3, 4, 5, 6].map((index) => (
-            <div key={index} className='teammate-info'>
+            <div key={index} className='teammate-info indented-divs'>
               <label>Teammate {index} Name&nbsp;&nbsp;</label><br />
               <input
                 type='text'

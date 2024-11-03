@@ -28,7 +28,8 @@ const sheets = google.sheets({ version: 'v4', auth });
 
 // Function to format participant data for Google Sheets
 const formatParticipantData = (participant) => {
-    // Flatten leader information and teammates' details into a single row for Google Sheets
+    // Flatten team name, leader information, and teammates' details into a single row for Google Sheets
+    const teamData = [participant.teamName];
     const leaderData = [
         participant.leaderName,
         participant.leaderEmail,
@@ -46,7 +47,7 @@ const formatParticipantData = (participant) => {
         participant.teammate6Name, participant.teammate6Email,
     ];
 
-    return [...leaderData, ...teammatesData];
+    return [...teamData, ...leaderData, ...teammatesData];
 };
 
 // Function to append data to Google Sheets

@@ -15,6 +15,7 @@ import {HashRouter, BrowserRouter, Route, Routes} from 'react-router-dom';
 import './App.css';
 
 import Form from '/src/components/Form/Form.jsx';
+import Leaderboard from './pages/Leaderboard/Leaderboard.jsx';
 
 function App() {
   const lenis = useLenis(({scroll}) => {
@@ -81,6 +82,12 @@ function App() {
           <Route exact path='/nexus-registration' element={<>
             <NavBar/>
             <Form/>
+            <Footer/>
+          </>}/>
+
+          <Route exact path='/nexus-leaderboard' element={<>
+            <NavBar/>
+            <Leaderboard/>
             <Footer/>
           </>}/>
 

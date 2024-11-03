@@ -1,0 +1,37 @@
+.Leaderboard {
+    background: #000000;
+    color: #717171;
+    height: 100vh;
+    padding: 15vh 2vw 12vh 2vw;
+    width: 92vw;
+}
+
+.nexus-leaderboard-title {
+    color: #ffffff;
+    font-size: 4vw;
+    font-weight: 300;
+    padding-bottom: 4vh;
+}
+
+.Leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+.Leaderboard-table tr {
+
+
+}
+
+.Leaderboard-table th {
+    border: 1px solid #ffffff;
+    padding: 8px;
+    text-align: center;
+}
+
+.Leaderboard-table td {
+    border: 1px solid #ffffff;
+    padding: 8px;
+    text-align: center;
+}

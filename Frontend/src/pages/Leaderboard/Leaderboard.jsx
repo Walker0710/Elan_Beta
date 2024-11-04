@@ -6,8 +6,8 @@ function Leaderboard() {
 
   const data = [
     { column1: "1", column2: "Team 1", column3: "132" },
-    { column1: "1", column2: "Team 1", column3: "132" },
-    { column1: "1", column2: "Team 1", column3: "132" }
+    { column1: "2", column2: "Team 2", column3: "132" },
+    { column1: "3", column2: "Team 3", column3: "132" }
   ];
 
 

@@ -21,11 +21,11 @@ function Nexus() {
         </div>
         <div className='nexus-reg-link'>
           <a
-            href='/nexus-registration'
+            href='/nexus-leaderboard'
             rel='noopener noreferrer'
             target='_blank'
             className='underline-white'>
-            Register Now&#8599;
+            Leaderboard&#8599;
           </a>
 
         </div>
